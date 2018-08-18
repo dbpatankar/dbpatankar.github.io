@@ -82,8 +82,8 @@ author:
   name             : "Digvijay Patankar"
   avatar           : "profile.png"
   bio              : "A humanoid"
-  location         : "Location"
-  employer         : "Indian Institute of Technology, Roorkee"
+  location         : "IIT Roorkee"
+  employer         : 
   googlescholar    : "https://scholar.google.co.in/citations?user=Svxm570AAAAJ&hl=en"
   email            :
   uri              :
@@ -91,15 +91,15 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "https://www.facebook.com/dbpatankar"
+  facebook         : "dbpatankar"
   foursquare       :
   github           : "dbpatankar"
   google_plus      : 
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/digvijay-patankar-1b191518/"
-  orcid            : ""
+  linkedin         : "digvijay-patankar-1b191518"
+  orcid            : 
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -109,7 +109,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : "https://www.youtube.com/channel/UCgqgtzEDcKJSHf-rFbQooNw?"
+  youtube          : "dbpatankar"
   wikipedia        :
 
 
