@@ -22,8 +22,8 @@
 #    url: /markdown/
     
 main:
-  - title: "Publications"
-    url: /publications/
+  - title: "Education"
+    url: /education/
 
   - title: "Talks"
     url: /talks/    
