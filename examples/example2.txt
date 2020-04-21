@@ -1,0 +1,13 @@
+This is an example file to be processed by sed.
+The file contains multiple instances of word 'file'.
+Task is to replace every instance of word 'file' with a new phrase 'text document'. 
+
+The text files are often used for configuration on unix based systems. File forms a basic building block for unix based system. 
+Hence it is important to learn to process them using stream editors like sed.
+
+Remember that on some lines there may be multiple instances of 'file' and you should replace all of them. 
+
+Also note that the script should only change the word file and not files or any other word which contain file in it. For example :
+1) file/File replace with text document
+2) files/Files not to be replaced
+3) Profile/subfiles not to be replaced
