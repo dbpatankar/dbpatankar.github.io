@@ -1,0 +1,56 @@
+In this example, input is a html file labeled as example3.txt
+whereas expected output is a plain text file labeled as example3.out.
+Download the files using wget from :
+https://dbpatankar.github.io/examples/example3.txt
+https://dbpatankar.github.io/examples/example3.out
+
+Three sample lines from input are given below. 
+
+
+<tr valign="top" class="smart"><td align="left"><a href="man_u/u4/u4.61.21.pdf" class="doc" onClick="javascript:_gaq.push(['_trackPageview', '/doc/default/en/man_u/u4/u4.61.21.pdf']);">[U4.61.21] Macro-command MACRO_MATR_ASSE</a></td></tr>
+<tr valign="top" class="smart"><td align="left"><a href="man_u/u4/u4.65.12.pdf" class="doc" onClick="javascript:_gaq.push(['_trackPageview', '/doc/default/en/man_u/u4/u4.65.12.pdf']);">[U4.65.12] Operator ASSE_ELEM_SSD</a></td></tr>
+<tr valign="top" class="smart"><td align="left"><a href="man_u/u4/u4.23.03.pdf" class="doc" onClick="javascript:_gaq.push(['_trackPageview', '/doc/default/en/man_u/u4/u4.23.03.pdf']);">[U4.23.03] Operator ASSE_MAILLAGE</a></td></tr>
+
+
+Input is a html table. The table contains links to pdf files given in <a> tags. The text corresponding to these links is given within <a> </a> tags. 
+
+So for above three lines, the pdf links are :
+man_u/u4/u4.61.21.pdf
+man_u/u4/u4.65.12.pdf
+man_u/u4/u4.23.03.pdf
+
+
+and the corresponding text  :
+[U4.61.21] Macro-command MACRO_MATR_ASSE
+[U4.65.12] Operator ASSE_ELEM_SSD
+[U4.23.03] Operator ASSE_MAILLAGE
+
+
+The task is to clean up the input file and get only above two fields. The output should be arranged such that the text is first and the corresponding link is next on the same line. For example :
+
+[U4.61.21] Macro-command MACRO_MATR_ASSE  man_u/u4/u4.61.21.pdf
+[U4.65.12] Operator ASSE_ELEM_SSD  man_u/u4/u4.65.12.pdf
+[U4.23.03] Operator ASSE_MAILLAGE  man_u/u4/u4.23.03.pdf
+
+
+This can be done in multiple ways. However, try to do it only with sed and preferably with a one line of sed only.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
