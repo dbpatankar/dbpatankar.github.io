@@ -1,0 +1,35 @@
+def function1():
+    """
+    This is function1 which takes no input arguments 
+    and prints a statement as output
+    """
+    print("Hello world!")
+    return 0
+def function2():
+    """
+    This is function1 which takes no input arguments 
+    and prints a statement as output
+    """
+    print("Hello new world!")
+    return 0
+def addme(x, y):
+    """
+    This function takes two numbers as input
+    and returns their sum
+    """
+    s = x+y
+    return s
+def multiply(x, y):
+    """ 
+    This function takes two numbers as inputs
+    returns their multiplication
+    """
+    m = x*y
+    return m
+def circleA(r):
+    """
+    This function takes radius of a circle as input
+    and returns its area
+    """
+    area = np.pi * r**2
+    return area
