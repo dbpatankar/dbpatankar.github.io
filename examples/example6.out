@@ -1,0 +1,227 @@
+Functions and formulas
+Validation of the operators AFFE CARA ELEM and POST ELEM
+Reading accelerogram and oscillator spectrum
+Impression des constantes numériques dépendant de la plate-forme
+Validation des variables de commandes en commandes éclatées avec des macro-éléments
+Validation informatique de la loi VISC ENDO LEMA
+Geometric criteria for DEFI GROUP
+Operator POST RCCM
+Test de l'interface Aster-MISS3D
+Vérification élémentaire de 'matr asse.EXTR MATR'.
+Validation of the operator PROJ CHAMP / ELEM (in 2D and wired)
+Validation of the operator DEFI CABLE BP
+Cylinder with variable pressure. Validation of LIRE PLEXUS
+Validation de l'impression et de la relecture des PENTA18 au format MED
+PROJ CHAMP for 3D surfaces
+Calculation of a bolt-flange assembly
+Mesh adaptation with HOMARD
+Validation of the operator CREA CHAMP OPERATION : 'ASSE'
+Validation of the keyword LIAISON MAIL of the command AFFE CHAR MECA
+Validation of the operators LIRE TABLE and IMPR TABLE
+Validation de la commande CREA RESU mot clé facteur PROL RTZ
+Validation de la commande CREA CHAMP/OPERATION = 'EVAL' / 'DISC'
+Validation de la commande CREA RESU mot clé facteur PERM CHAM
+Validation de non régression de la lecture de données MED
+Validation of POST RELEVE T
+Opérateur AFFE CHAR MECA et AFFE CHAR THER : validation des mots clés EVOL CHAR, PRES REP, FORCE CONTOUR
+Sensitivity to mechanical nodal imposed forces in linear mechanics
+Sensitivity in thermics
+Identification of an elastoplastic behavior law from a tensile test
+Data transfer with the MED format
+Sensitivity to material parameter in 3D isotropic harmonic dynamics
+Validation of the keyword TRANSLATION, ROTATION, MODI BASE and ECHELLE of the MODI MAILLAGE command
+LIRE RESU in IDEAS format
+Calcul du flux en thermique
+Coupling Aster and HOMARD on a non-linear problem with STAT NON LINE
+Validation des opérateurs PRE IDEAS, PRE GMSH, PRE GIBI, LIRE RESU et IMPR RESU
+Validation des opérations sur les tables
+Tests analytiques liés à la génération de signaux aléatoires avec GENE FONC ALEA
+Validation of the MODI MAILLAGE command with SYMETRIE and of the PROJ CHAMP command with DISTANCE MAX
+Validation de l'opérateur IMPR OAR
+Circumferential orientation by a Python loop
+Validation des opérateurs AFFE CHAR MECA et AFFE CHAR CINE dans le cas d'un déplacement imposé
+Test fictif pour produire le vocabulaire du catalogue de commandes
+Test de RIGI PARASOL et RIGI MISS 3D
+Calculation of the kinetic energy of a rectangular plate
+Opérateur CREA MAILLAGE : validation du mot clé QUAD LINE
+Validation des méthodes d'extraction et de récupération des termes généralisés
+Validation des opérateurs AFFE CHAR MECA/AFFE CHAR CINE avec les solveurs LDLT/MULT FRONT/GCPC
+Coupling Code Saturne and Code Aster in 3D
+Validation de STANLEY
+Validation de la commande MACR ECREVISSE
+AFFE CHAR MECA : validation du mot-clé FACE IMPO
+Validation d'un calcul de chainage thermo-hydradation
+Validation du mécanisme de surcharge d'AFFE CHAR CINE
+Validation CREA RESU / ASSE and AFFE MATERIAU / AFFE VARC / FONC INST
+Error messages verification for the subroutines CALCUL and PRERES
+Verification for missing control variables
+Numerical integration of  the VMIS ISOT LINE behavior law  with the CALCUL command
+Validation de la création de la carte de température de référence
+Validation des options PREP VRC1 et PREP VRC2 de l'opérateur CREA RESU
+Validation of the command AFFE CHAR MECA / LIAISON SOLIDE + TRAN + ANGL NAUT
+Implementation of the "structural zoom" technique on a 2D problem
+Validation of the contact in initial geometry
+Validation du mot-clé FRAGILITE de la commande POST DYNA ALEA
+Reference values verification for the beams, rods, cables, discrete elements
+Validation élémentaire de la commande CALC EUROPLEXUS
+Validation du mot-clé RESTREINT de l'opérateur CREA MAILLAGE
+Validation of LIAISON UNIL and TOLE APPA
+Déplacements normaux imposés sur des faces courbes d'hexaèdres à 20 et 27 noeuds
+Validation de EXTR RESU/RESTREINT
+Validation du calcul des fonctions de transfert
+Calculation of elastic hollow ring subjected to internal pressure
+Calculation of a thermo-elastic hollow ring subjected to thermal loading
+modes of a square plate clamped on two sides
+Calculation of elastoplastic hollow ring subjected to internal pressure
+Hertz contact between two hemispheres
+Dynamic sub-structuring : thin plate resting on the edges
+Vérification de la commande CALC EUROPLEXUS en multi-domaine
+Validation de POST ELEM/INTEGRALE
+Validation de ORIE PEAU 2D/GROUP MA SURF et de ORIE PEAU 3D/GROUP MA VOLU
+Bâtiment de génie civil sous sollicitation sismique
+Elastic computation of a dolly subjected to thermal loading
+Calcul non linéaire mécanique avec changement de maillage
+Validation of the TEST MAIL option of the  PROPA FISS command
+Validation de la combinaison de matrices non symétriques
+Error estimation for quantities of interest in fracture mechanics
+Validation of the keyword ETAT INIT STAT NON LINE
+Mesh adaptation and boundary following in 2D
+Error messages during a prohibited change of constitutive law
+Validation of PROJ CHAMP for 2D fields
+Computation of an elastic RIS pump
+Elastic computation a dolly in parallel
+Validation de la commande POST ENDO FISS
+Validation de la commande DYNA NON LINE en parallèle
+Validation of the COOR ELGA option of the CALC CHAM ELEM command
+Validation of POST BORDET in 2D and 3D
+STAT NON LINE : separate comands for an elastic-plastic computation
+Validation of PROJ CHAMP for 2D and 3D Gauss points fields
+Calcul élastique d'un cylindre
+Validation of a non-symmetric discrete finite element for a linear static calculation using MECA STATIQUE
+Example of parametric study
+Error message in case of interpenetration
+Detection of a simple singularity in MECA STATIQUE
+Detection of a simple singularity with separate commands
+Verification of the recovery of fatal errors in STAT NON LINE
+Vérification du fonctionnement du NaN dans Code Aster
+Validation of the definition of a crack on a grid DEFI FISS XFEM
+Validation of the use of a grid with a crack on an X-FEM mesh refined by HOMARD
+Validation of the CHAR MECA HYDR R  and CHAR MECA SECH R options
+Validation of PROJ CHAMP / Collocation
+Validation of movement imposed on an edge
+Validation of the POST RUPTURE operator
+Performance of elemental calculations in 3D
+Validation of the elemental matrices for the INCO elements
+Performance of a modal analysis in parallel
+Validation of the NORME keyword of POST ELEM
+Validation of SANS GROUP NO FR
+Validation of the position of the sub-integration points of multi-fibers beams
+Validation of the position of the sub-integration points of 3D plates
+Validation of the position of the sub-integration points of 2D plates
+Validation of the position of the sub-integration points of pipes
+Validation du mot clef LIAISON PROJ de la commande AFFE CHAR MECA
+Validation informatique de POST K1 K2 K3
+Vérification des repères locaux
+Vérification du fonctionnement de INCLUDE
+Vérification des catalogues de messages
+Validation du traitement des exceptions
+Projection d'un champ par éléments ELNO discontinu
+Validation de DEFI CABLE BP
+Vérification de PROJ CHAMP / ECLA PG
+Validation informatique du parallélisme des calculs élémentaires et des assemblages
+Validation de l'arrêt pour instabilité dans STAT NON LINE
+Validation des options topologiques ZONE MAJ et TORE dans DEFI GROUP
+Validation du Wizard Crack Analysis du module Aster de Salome-Meca
+Contact entre deux plaques en parallèle
+Validation des câbles de précontrainte dans CALC EUROPLEXUS
+Test de vérification de numpy/lapack
+Validation informatique de DEFI FOND FISS
+Validation de la commande PROD MATR CHAM (matrice réelle)
+Test du superviseur
+Génération de signaux sismiques avec GENE ACCE SEISME
+Validation de la méthode SOUS POINT MATER de la commande PROJ CHAMP
+Validation informatique de MACR ADAP MAIL
+Plaque précontrainte de béton armé sous pression uniforme avec la loi GLRC DAMAGE
+Recette graphique de l'outil Eficas
+Validation de la relecture au format MED d'un champ ELGA
+Validation de l'impression des repères locaux par IMPR RESU/CONCEPT
+Validation de l'action REAC PRECOND
+CALC CHAMP / 'SIRO ELEM'
+Validation de l'impression des sous-points au format MED
+Test de performance pour la scalabilité des calculs élémentaires
+Validation de CALC CHAMP / ENEL ELEM
+Validation de CONTACT INIT avec découpe
+Validation du calcul de l'énergie potentielle pour les éléments de poutres
+Validation de la définition des caractéristiques de coques/grilles par des fonctions de l'espace
+Validation de CREA RESU/EVOL VARC
+ Validation de MODI REPERE
+Validation de VERI BORNE
+Test d'émission des messages d'erreur pour les variables de commande
+Validation de la prise en compte des variables de commandes aux sous-points
+Vérification d'INFO MODE et de CALC MODES parallèles
+Performances d'INFO MODE et de CALC MODES parallèles
+Validation du calcul de G avec contraintes initiales en 3D
+Validation du mot-clé TEMP CONTINUE pour AFFE CHAR THER
+Validation de la pression suiveuse fonction de l'espace
+Validation de ELAS HYPER en petites perturbations
+Exécution des tests unitaires Python
+Validation du calcul des déviations angulaires dans DEFI CABLE BP
+Bifurcation d'une interface droite XFEM avec des éléments 2D quadratiques
+Validation des câbles frottants CABLE GAINE
+Validation des champs ELGA et ELNO sur les éléments COQUE 3D
+Validation des mot-clés DIST ESCL/DIST MAIT avec une fonction du temps
+Validation de la commande ELIM LAGR
+Validation du mot clé SOLVEUR / ELIM LAGR = 'OUI'
+Validation du plugin de calcul de conduites forcées
+Validation de la commande MACR ECREVISSE sur les options de frottement
+Validation de la commande MACR ECREVISSE sur les options de transfert de chaleur
+Validation de la commande RAFF GP
+Validation du convertisseur de maillages
+Validation du mot-clé MODELE THER de l'opérateur MODI MODELE XFEM
+Validation de la macro-commande POST CZM FISS / OPTION = 'TRIAXIALITE'
+Validation de la commande MODI MAILLAGE / ABSC CURV
+Cas de découpe dégénérés pour les éléments XFEM 3D quadratique
+Vérification de la cohérence des champs produits par le sous-découpage X-FEM
+Endommagement dynamique d'une éprouvette entaillée en AXIS
+Validation des grandes rotations
+Validation de la transformation d’un SIEF R(3D) vers un SIEF R(DKT)
+Test de validation d' IMPR RESU et LIRE RESU
+Validation du mot clé POST INCR de COMPORTEMENT
+Validation des nouvelles fonctionnalités de CALC EUROPLEXUS
+Validation de l'option MASS MECA pour les éléments MEMBRANE et GRILLE MEMBRANE
+Validation des câbles glissants et frottants dans CALC EUROPLEXUS
+Test de la gestion d'erreur en MPI
+Validation de l'utilisation des ressorts de sol dans CALC EUROPLEXUS
+Réponse transitoire d'une dalle en béton armé : modèle GLRC DAMAGE
+Validation des concepts utilisant la structure de données multifibre
+Validation de CALC CHAMP sur des poutres avec champs complexes
+Validation de la commande CREA MAILLAGE / DECOUPE LAC
+Validation du mot clef MASS REP de la commande AFFE CARA ELEM
+Validation de LIAISON SOLIDE en 2D et avec de grandes rotations
+Validation de LIAISON SOLIDE en 3D et avec de grandes rotations
+Validation de la gestion des bornes dans  l'interface MFront
+Validation de la projection sélective aux  nœuds d'un champ de variables internes
+Validation de la relecture d'un champ de  force surfacique dans  LIRE RESU
+Interface en contact frottant avec X-FEM
+Validation de VMIS JOHN COOK  dans CALC EUROPLEXUS
+Validation du concept mode meca issu de CREA RESU pour COMB SISM MODAL/MODE CORR
+Pré-déformations par fonction pour  plaques, grilles et membranes
+Vérification de PRE EPSI pour les modélisations DKT et DKTG
+Vérification des opérateurs de réduction de modèle
+Vérification de l'ajustement des levels sets quadratiques pour les fissures segments
+Contact entre une sphère incluse dans une sphère
+Fréquences d'un oscillateur harmonique quantique à une dimension
+Validation de la relecture d'un champ de variables internes avec plusieurs comportements dans LIRE RESU  au format MED
+Vérification des outils de renumérotation des solveurs linéaires directs
+Validation de la commande POST LIQUEFACTION sur un barrage en 2D
+Validation de l’envoi d’un état initial dynamique par CALC EUROPLEXUS
+Validation du modèle d’usure
+Validation de la fusion des charges dans  l’opérateur CALC G
+Validation de MACR CARA POUTRE avec  TABLE CARA= ' OUI '
+Validation de la macro-commande LISS SPECTRE
+Validation de l'interface entre  code aster et les lois de comportement au format UMAT
+THER  NON LINE en commandes éclatées
+Calcul des champs aux nœuds pour les éléments de structure
+Validation de l'utilisation de  DEFI SOL EQUI
+Validation de l’impression au format MED des éléments à sous-points
+Vérification de la loi de HUJEUX sur un point matériel
