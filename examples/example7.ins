@@ -1,0 +1,34 @@
+The input and output files are located at :
+https://dbpatankar.github.io/examples/example7.inp
+https://dbpatankar.github.io/examples/example7.out
+
+
+The input file contains output data in two different formats. Consider sample lines from the file given below :
+
+
+ M175                  X                     Y                     Z                  N          
+ N120      1.50000000000000E+01  8.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00
+ N128      1.50000000000000E+01  1.20000000000000E+01  3.00000000000000E+00  0.00000000000000E+00
+ M181                  X                     Y                     Z                  N          
+ N127      1.50000000000000E+01  1.20000000000000E+01  0.00000000000000E+00  0.00000000000000E+00
+ N135      1.50000000000000E+01  1.60000000000000E+01  3.00000000000000E+00  0.00000000000000E+00
+ M187                  X                     Y                     Z                  N                     VY                    VZ         
+                    MT                    MFY                   MFZ        
+ N1        0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00
+           0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00
+ N1419     0.00000000000000E+00  0.00000000000000E+00  3.75000000000000E-01  0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00
+           0.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00
+
+
+
+First part of data contains only 5 fields which are ID, X, Y, Z and N while other part of data contains 10 fields which are ID, X, Y, Z, N, VY, VZ, MT, MFY, MFZ. Task is to extract only the data which has 5 fields only. So for the above example, the output should be :
+
+ M175                  X                     Y                     Z                  N          
+ N120      1.50000000000000E+01  8.00000000000000E+00  0.00000000000000E+00  0.00000000000000E+00
+ N128      1.50000000000000E+01  1.20000000000000E+01  3.00000000000000E+00  0.00000000000000E+00
+ M181                  X                     Y                     Z                  N          
+ N127      1.50000000000000E+01  1.20000000000000E+01  0.00000000000000E+00  0.00000000000000E+00
+ N135      1.50000000000000E+01  1.60000000000000E+01  3.00000000000000E+00  0.00000000000000E+00
+
+
+Any tool can be used for this. 
