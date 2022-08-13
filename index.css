@@ -55,3 +55,10 @@ li a:hover {
   background-color: #fad390;
   color: #fff;
 }
+
+
+table, tbody, th, tr, td, .education {
+  border: 1px solid black;
+  font-size: 0.9em;
+  padding: 8px;
+}
