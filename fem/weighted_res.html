@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:x="https://www.texmacs.org/2002/extensions" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <head>
+    <title>Weighted residuals</title>
+    <meta content="TeXmacs 2.1.1" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; }
+    </style>
+    <link href="../mystyle.css" type="text/css" rel="stylesheet"></link>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" language="javascript"></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+
+      </p>
+      <p>
+
+      </p>
+      <p>
+
+      </p>
+      <p>
+
+      </p>
+    </div>
+    <table class="title-block" style="margin-bottom: 2em">
+      <tr>
+        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><font style="font-size: 168.2%"><strong>Weighted residuals</strong></font></td>
+          </tr>
+        </table><div class="compact-block" style="margin-top: 1em; margin-bottom: 1em">
+          <table class="title-block">
+            <tr>
+              <td><p style="margin-top: 0.5em; margin-bottom: 0.5em">
+                <div style="display: inline">
+                  <span style="margin-left: 0pt"></span>
+                </div>
+                <table style="display: inline-table; vertical-align: middle">
+                  <tbody><tr>
+                    <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-bottom: 0em; padding-top: 0em; width: 100%"><center>
+                      <p>
+                        <class style="font-variant: small-caps">by Digvijay Patankar</class>
+                      </p>
+                    </center></td>
+                  </tr></tbody>
+                </table>
+              </p></td>
+            </tr>
+          </table>
+        </div></td>
+      </tr>
+    </table>
+    <h2>Table of contents<span style="margin-left: 1em"></span></h2>
+    <div class="compact-block" style="text-indent: 0em">
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>1<span style="margin-left: 1em"></span>Some background</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2<span style="margin-left: 1em"></span>Approximate solution and domain residual</b>
+        <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>3<span style="margin-left: 1em"></span>Minimize residual</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-4">3</a>
+      </p>
+      <p>
+        3.1<span style="margin-left: 1em"></span>Graphical representation of domain residual
+        <span style="margin-left: 5mm"></span> <a href="#auto-6">3</a>
+      </p>
+      <p>
+        3.2<span style="margin-left: 1em"></span>Method of weighted residuals <span style="margin-left: 5mm"></span>
+        <a href="#auto-8">5</a>
+      </p>
+      <p>
+        3.2.1<span style="margin-left: 1em"></span>Weighting function = 1 <span style="margin-left: 5mm"></span>
+        <a href="#auto-9">5</a>
+      </p>
+      <p>
+        3.2.2<span style="margin-left: 1em"></span>Weighting function = \(x\) <span style="margin-left: 5mm"></span>
+        <a href="#auto-10">5</a>
+      </p>
+      <p>
+        3.2.3<span style="margin-left: 1em"></span>Generic approximation function <span style="margin-left: 5mm"></span>
+        <a href="#auto-11">6</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>4<span style="margin-left: 1em"></span>Summary</b> <span style="margin-left: 5mm"></span> <a href="#auto-12">7</a>
+      </p>
+    </div>
+    <p>
+      <hr></hr>
+    </p>
+    <p>
+      In Finite Element Method, the discussion often leads to something called
+      statement of weighted residuals. So let us explore what it means to me.
+    </p>
+    <h2 id="auto-1">1<span style="margin-left: 1em"></span>Some background<span style="margin-left: 1em"></span></h2>
+    <p>
+      Let us say we have a differential equation given by eq (<a href="#eq-simpde">1</a>)
+      with boundary condition as \(y = 0\operatorname{at}x = 0\) and let us
+      restrict ourselves to the domain \(x \in [0, 1]\).
+    </p>
+    <div style="text-indent: 0em; margin-top: 0.5em; margin-bottom: 0.5em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="width: 100%; white-space: nowrap; padding-left: 0em; text-align: center">\begin{eqnarray*}
+  \dfrac{\mathrm{d} y}{\mathrm{d} x} &
+          = & 3 x^2
+\end{eqnarray*}</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right"><class style="font-style: normal">(1)</class><a id="eq-simpde"></a></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      Solution of this differential equation can be obtained very easily by
+      integrating both sides and then eliminating the constant term using
+      boundary condition. The analytical solution is given by eq (<a href="#eq-simpdesol">2</a>).
+    </p>
+    <div style="text-indent: 0em; margin-top: 0.5em; margin-bottom: 0.5em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="width: 100%; white-space: nowrap; padding-left: 0em; text-align: center">\begin{eqnarray*}
+  y & = & x^3
+\end{eqnarray*}</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right"><class style="font-style: normal">(2)</class><a id="eq-simpdesol"></a></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      We will be using this differential equation and referring to the
+      analytical solution throughout this article.
+    </p>
+    <h2 id="auto-2">2<span style="margin-left: 1em"></span>Approximate solution and domain residual<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Now lets just pretend that the differential equation given by eq (<a
+      href="#eq-simpde">1</a>) is either too complex to solve analytically or it has no
+      analytical solution. So the only option left to us is to solve it using
+      some numerical technique which should give us an approximation to the
+      actual solution i.e. eq (<a href="#eq-simpdesol">2</a>).
+    </p>
+    <p>
+      Before we proceed with the numerical solution,  lets see what
+      information do we have about the &ldquo;unknown solution&rdquo; which we
+      want to find out.
+    </p>
+    <ol>
+      <li>
+        <p>
+          The &ldquo;unknown solution&rdquo; should satisfy differential
+          equation given by eq (<a href="#eq-simpde">1</a>) at each point of the domain
+          i.e. \(x \in [0, 1]\).
+        </p>
+      </li>
+      <li>
+        <p>
+          The &ldquo;unknown solution&rdquo; should satisfy the condition \(y
+          = 0\operatorname{at}x = 0\).
+        </p>
+      </li>
+    </ol>
+    <p>
+      For the sake of brevity, lets say the &ldquo;unknown solution&rdquo; is
+      \(\hat{y}  (x)\) which is an approximation to \(y (x)\). Of the two
+      conditions above, second one seems easy to satisfy. Can we come up with
+      some function \(\hat{y}  (x)\) which has property \(\hat{y} = 0\) at \(x
+      = 0\)? How about \(\hat{y}  (x) = c_1 x\)? where \(c_1\) is an arbitrary
+      constant? Does this function satisfy the first condition given above?
+      Definitely not. But I still want to use the same function as an
+      approximation to the analytical solution given by eq (<a href="#eq-simpdesol">2</a>).
+      There is an issue though, I do not have any idea about what should be
+      the arbitrary constant \(c_1\). With change in \(c_1\), the function
+      \(\hat{y}  (x)\) also changes. So lets plot \(\hat{y}  (x)\) for
+      different values of \(c_1\) and on the same plot we will also show the
+      analytical solution just for the sake of comparison.
+    </p>
+    <p>
+
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><p>
+            <img src="weighted_res-1.png" style="margin-left: -0.0248242424242424em; margin-bottom: -0.0248242424242424em; margin-right: -0.0248242424242449em; margin-top: 0em; vertical-align: 0em; height: 22.0147878787879em"></img>
+          </p></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 1. </b><a id="auto-3"></a>Comparison of analytical solution
+              with approximation function \(\hat{y}  (x) = c_1 x\) with
+              varying values of \(c_1\).<a id="fig-c0cases"></a>
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      From the Figure <a href="#fig-c0cases">1</a>, it is clear that none of the \(c_1\)
+      values are giving us an approximation which satisfies condition 1. I can
+      say this only because I have the exact solution with me. In reality, you
+      will never have the exact solution to compare with. In fact, if you
+      already have the exact solution, seeking approximate solution is
+      stupidity. So lets continue with our stupidity.
+    </p>
+    <p>
+      As I dont know the exact solution I want to use \(c_1 x\) as our
+      approximate solution. But what value of \(c_1\) should I choose which
+      will keep \(\hat{y}  (x)\) as &ldquo;close&rdquo; to actual solution as
+      possible. How to decide which curve is better than all the other
+      infinite choices? This is where we are going to use our first condition
+      which states that the actual solution satisfies eq (<a href="#eq-simpde">1</a>) at
+      each point on the domain. However, we have an approximation \(\hat{y}
+      (x)\) which does not satisfy the differential equation at every point in
+      the domain. If we substitute \(\hat{y}  (x)\) into the differential
+      equation, what we get is error \(R_{\Omega}\). The error \(R_{\Omega}
+      \)is often referred to as domain residual as this gives us the residual
+      (i.e. error) at any point in the domain.
+    </p>
+    <div style="text-indent: 0em; margin-top: 0.5em; margin-bottom: 0.5em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="width: 100%; white-space: nowrap; padding-left: 0em; text-align: center">\begin{eqnarray*}
+  \dfrac{\mathrm{d} \hat{y}
+          (x)}{\mathrm{d} x} - 3 x^2 & = & R_{\Omega}
+\end{eqnarray*}</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right"><class style="font-style: normal">(3)</class><a id="eq-domain-res"></a></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      If we substitute \(x\) coordinate of any point in the domain, we will
+      get error at that point due to approximation function \(\hat{y}  (x) =
+      c_1 x\). For ex: @ \(x = 0\), the domain residual is \(c_1\) and @ \(x =
+      1\) the domain residual is \(c_1 - 3\). One can also note that @ \(x =
+      \sqrt{\dfrac{c_1}{3}}\), the domain residual vanishes.
+    </p>
+    <h2 id="auto-4">3<span style="margin-left: 1em"></span>Minimize residual<span style="margin-left: 1em"></span></h2>
+    <p>
+      We have seen that the approximation function introduces domain residual
+      at each point on the domain. Also the domain residual varies from point
+      to point and at some point it can also be zero. Ideally we want the
+      domain residual to be zero at all points. But as that is not possible,
+      lets do whatever best we can. Lets just have one more plot for varying
+      value of \(c_1\). But this time instead of plotting the approximation
+      function, lets plot the domain residual. We know \(R_{\Omega}\) is given
+      by
+    </p>
+    <center>
+      \(\displaystyle R_{\Omega} = c_1 - 3 x^2\)
+    </center>
+    <p>
+
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><img src="weighted_res-2.png" style="margin-left: -0.0248242424242424em; margin-bottom: -0.0248242424242424em; margin-right: -0.0248242424242449em; margin-top: 0em; vertical-align: 0em; height: 22.0147878787879em"></img></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 2. </b><a id="auto-5"></a>Domain residual \(R_{\Omega} = c_1 -
+              3 x^2\) for varying \(c_1\).
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      One of the easiest ways to minimize this error is using &ldquo;method of
+      least squares&rdquo;. This time even though we do not have exact
+      solution, we do have domain residual which is equivalent to error.
+      However, we will not discuss that here. We want to see method of
+      weighted residuals in action to minimize this residual. But before
+      minimizing it, lets try to visualize it in a graphical way.
+    </p>
+    <h3 id="auto-6">3.1<span style="margin-left: 1em"></span>Graphical representation of domain
+    residual<span style="margin-left: 1em"></span></h3>
+    <p>
+      We know that the exact solution is \(y (x) = x^3\). I can write the same
+      expression as
+    </p>
+    <center>
+      \(\displaystyle y (x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3\)
+    </center>
+    <p>
+      Where \(a_0 = a_1 = a_2 = 0\) and \(a_3 = 1\). We will look at this
+      expression just like we look at vectors. Lets say the function \(y (x)\)
+      is composed of four basis functions, \(1, x, x^2 \text{ and } x^3\)
+      weighted by \(a_0, a_1, a_2 \text{ and } a_3\) respectively. Note that
+      the basis functions need not be orthogonal to each other. So lets just
+      draw this (conceptually only). Let me emphasize that the below drawing
+      is only for understanding. It is based on concepts of vector spaces
+      which are applicable in function spaces as well. However we cannot draw
+      the function spaces like this.
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><img src="weighted_res-3.png" style="margin-left: -0.0248242424242424em; margin-bottom: 0em; margin-right: -0.0248242424242449em; margin-top: 0em; vertical-align: -7.32998787878788em; height: 14.6599757575758em"></img></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 3. </b><a id="auto-7"></a>Conceptual visualization of domain
+              residual.<a id="fig-rw"></a>
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      Figure <a href="#fig-rw">3</a> shows a conceptual visualization of domain
+      residual. The function space contains four basis vectors \(1, x, x^2
+      \text{ and } x^3\). Each point in this function space represents a
+      polynomial of degree \(3\). So in the same function space we can draw
+      our exact solution \(y (x) = x^3\) and the domain residual \(R_{\Omega}
+      = c_1 - 3 x^2\). We can take inner product of \(R_{\Omega}\) with each
+      of the basis function to get its projection on that basis function. As
+      we want \(R_{\Omega}\) to vanish, we will enforce each inner product to
+      vanish. The inner product of two functions \(u (x) \text{ and } v (x)\)
+      is given as
+    </p>
+    <center>
+      \begin{eqnarray*}
+  \langle u, v \rangle & = & \underset{\Omega}{\int} u
+      (x) v (x) \mathrm{d} x
+\end{eqnarray*}
+    </center>
+    <p>
+      So the inner product of \(R_{\Omega}\) with four basis functions is
+      given as
+    </p>
+    <div style="text-indent: 0em; margin-top: 0.5em; margin-bottom: 0.5em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right; padding-bottom: 0.45em">\(\displaystyle \langle 1, R_{\Omega} \rangle\)</td>
+          <td style="white-space: nowrap; text-align: center; padding-bottom: 0.45em">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left; padding-bottom: 0.45em">\(\displaystyle \underset{0}{\overset{1}{\int}}
+          R_{\Omega} \mathrm{d} x\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right; padding-bottom: 0.45em"><class style="font-style: normal">(4)</class><a id="eq-rw1"></a></td>
+        </tr><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right; padding-bottom: 0.45em">\(\displaystyle \langle x, R_{\Omega} \rangle\)</td>
+          <td style="white-space: nowrap; text-align: center; padding-bottom: 0.45em">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left; padding-bottom: 0.45em">\(\displaystyle \underset{0}{\overset{1}{\int}}
+          xR_{\Omega} \mathrm{d} x\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right; padding-bottom: 0.45em"><class style="font-style: normal">(5)</class><a id="eq-rwx"></a></td>
+        </tr><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right; padding-bottom: 0.45em">\(\displaystyle \langle x^2, R_{\Omega} \rangle\)</td>
+          <td style="white-space: nowrap; text-align: center; padding-bottom: 0.45em">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left; padding-bottom: 0.45em">\(\displaystyle \underset{0}{\overset{1}{\int}} x^2
+          R_{\Omega} \mathrm{d} x\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right; padding-bottom: 0.45em"><class style="font-style: normal">(6)</class><a id="eq-rwx2"></a></td>
+        </tr><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right">\(\displaystyle \langle x^3, R_{\Omega} \rangle\)</td>
+          <td style="white-space: nowrap; text-align: center">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left">\(\displaystyle \underset{0}{\overset{1}{\int}} x^3
+          R_{\Omega} \mathrm{d} x\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right"><class style="font-style: normal">(7)</class><a id="eq-rwx3"></a></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      Each inner product is set to 0, which gives us four conditions. In this
+      particular problem, our chosen approximation is linear and hence it has
+      only one constant \(c_1\). Hence we do not need all the four conditions.
+      Here we only need one condition. So we can pick any of the four
+      conditions. I am goint to take two conditions and find out approximate
+      solution in each case.
+    </p>
+    <h3 id="auto-8">3.2<span style="margin-left: 1em"></span>Method of weighted residuals<span style="margin-left: 1em"></span></h3>
+    <p>
+      Finally we are here! Have a look at eqs (<a href="#eq-rw1">4</a> - <a href="#eq-rwx3">7</a>).
+      What is happening there? We have a domain residual term \(R_{\Omega}\).
+      And instead of integrating that term over the domain, we are first
+      &ldquo;weighting&rdquo; that term by one of our basis functions and then
+      integrating over the domain. The final part is to set this integral to
+      zero. This itself is nothing but &ldquo;weighted residuals&rdquo;. And
+      obtaining the approximation using this is nothing but &ldquo;Method of
+      Weighted Residuals&rdquo;. So lets just proceed with finding out a
+      better approximation.
+    </p>
+    <h4 id="auto-9">3.2.1<span style="margin-left: 1em"></span>Weighting function = 1<span style="margin-left: 1em"></span></h4>
+    <p>
+      The weighted residual becomes
+    </p>
+    <center>
+      \begin{eqnarray*}
+  \langle 1, R_{\Omega} \rangle & = &
+      \underset{0}{\overset{1}{\int}}
+  R_{\Omega} \mathrm{d} x\\
+  & = &
+      \underset{0}{\overset{1}{\int}} (c_1 - 3 x^2) \mathrm{d}
+      x
+\end{eqnarray*}
+    </center>
+    <p>
+      Set the residual to zero.
+    </p>
+    <center>
+      \begin{eqnarray*}
+  0 & = & \underset{0}{\overset{1}{\int}} (c_1 - 3
+      x^2) \mathrm{d} x\\
+  & = & [c_1 x - x^3]_0^1\\
+  & = & c_1 - 1\\
+
+      \operatorname{Hence} \quad c_1 & = & 1
+\end{eqnarray*}
+    </center>
+    <p>
+      So the approximation function is \(\hat{y}  (x) = x\).
+    </p>
+    <h4 id="auto-10">3.2.2<span style="margin-left: 1em"></span>Weighting function = \(x\)<span style="margin-left: 1em"></span></h4>
+    <p>
+      The weighted residual statement is
+    </p>
+    <center>
+      \begin{eqnarray*}
+  \langle x, R_{\Omega} \rangle & = &
+      \underset{0}{\overset{1}{\int}}
+  xR_{\Omega} \mathrm{d} x\\
+  0 & = &
+      \underset{0}{\overset{1}{\int}} x (c_1 - 3 x^2) \mathrm{d} x\\
+  & = &
+      \left[ \dfrac{c_1 x^2}{2} - \dfrac{3 x^4}{4} \right]_0^1\\
+  & = &
+      \dfrac{c_1}{2} - \dfrac{3}{4}\\
+  \operatorname{Hence} \quad c_1 & = &
+      1.5
+\end{eqnarray*}
+    </center>
+    <p>
+      This time the approximation is \(\hat{y}  (x) = 1.5 x\).
+    </p>
+    <p>
+      So what is the approximation function \(\hat{y}  (x)\), if remaining two
+      basis functions are used for weighting? I keep it as an exercise for
+      you.
+    </p>
+    <p>
+      This conceptually completes our problem. However, lets just have a look
+      at our approximation and exact solution. We can definitely say that the
+      approximations are &ldquo;not appropriate&rdquo;. Why? Because our
+      initially assumed \(\hat{y}  (x) = c_1 x\) is a poor choice. The
+      differential equation contains first order derivative and it equates
+      with a quadratic term in \(x\). This itself tells us that the solution
+      has to be cubic. So what happens if we choose a cubic polynomial as an
+      approximation? Lets find out quickly.
+    </p>
+    <h4 id="auto-11">3.2.3<span style="margin-left: 1em"></span>Generic approximation function<span
+    style="margin-left: 1em"></span></h4>
+    <p>
+      let \(\hat{y}  (x) = c_0 + c_1 x + c_2 x^2 + c_3 x^3\). We need to find
+      out the values of constants \(c_{i = 0, \ldots, 3}\). Based on boundary
+      condition \(y (0) = 0\), we can eliminate \(c_0\) as it has to be zero.
+      So
+    </p>
+    <center>
+      \begin{eqnarray*}
+  \hat{y}  (x) & = & c_1 x + c_2 x^2 + c_3 x^3\\
+
+      \dfrac{\mathrm{d} \hat{y}}{\mathrm{d} x} & = & c_1 + 2 c_2 x + 3 c_3
+      x^2
+\end{eqnarray*}
+    </center>
+    <p>
+      Substituting in eq (<a href="#eq-simpde">1</a>)
+    </p>
+    <center>
+      \begin{eqnarray*}
+  c_1 + 2 c_2 x + 3 c_3 x^2 & = & 3 x^2\\
+
+      \operatorname{Hence} \quad R_{\Omega} & = & c_1 + 2 c_2 x + 3 c_3 x^2 -
+      3
+  x^2
+\end{eqnarray*}
+    </center>
+    <p>
+      Just by looking at above equation we can say that \(c_1 = c_2 = 0\) and
+      \(c_3 = 1\). But lets just follow our procedure to see what values we
+      come up with.
+    </p>
+    <p>
+      Our approximation function \(\hat{y}  (x)\) contains three arbitrary
+      constants. Hence we need three conditions i.e. three basis functions as
+      weighting functions. So as per the method of weighted residuals, lets
+      choose \(x, x^2 \text{ and } x^3\) as the weighting functions.
+    </p>
+    <div style="text-indent: 0em; margin-top: 0.5em; margin-bottom: 0.5em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right; padding-bottom: 0.45em">\(\displaystyle \langle x, R_{\Omega} \rangle\)</td>
+          <td style="white-space: nowrap; text-align: center; padding-bottom: 0.45em">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left; padding-bottom: 0.45em">\(\displaystyle \underset{0}{\overset{1}{\int}} x (c_1 +
+          2 c_2 x + 3 c_3 x^2 - 3 x^2)
+\mathrm{d} x\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right; padding-bottom: 0.45em"></td>
+        </tr><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right; padding-bottom: 0.45em">\(\displaystyle 0\)</td>
+          <td style="white-space: nowrap; text-align: center; padding-bottom: 0.45em">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left; padding-bottom: 0.45em">\(\displaystyle \left[ \dfrac{c_1 x^2}{2} + \dfrac{2 c_2
+          x^3}{3} + \dfrac{3 c_3 x^4}{4} -
+\dfrac{3 x^4}{4} \right]^1_0\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right; padding-bottom: 0.45em"></td>
+        </tr><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right; padding-bottom: 0.45em">\(\displaystyle \)</td>
+          <td style="white-space: nowrap; text-align: center; padding-bottom: 0.45em">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left; padding-bottom: 0.45em">\(\displaystyle \dfrac{c_1}{2} + \dfrac{2 c_2}{3} +
+          \dfrac{3 c_3}{4} - \dfrac{3}{4}\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right; padding-bottom: 0.45em"><class style="font-style: normal">(8)</class><a id="eq-simE1"></a></td>
+        </tr><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right; padding-bottom: 0.45em">\(\displaystyle \langle x^2, R_{\Omega} \rangle\)</td>
+          <td style="white-space: nowrap; text-align: center; padding-bottom: 0.45em">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left; padding-bottom: 0.45em">\(\displaystyle \underset{0}{\overset{1}{\int}} x^2  (c_1
+          + 2 c_2 x + 3 c_3 x^2 - 3 x^2)
+\mathrm{d} x\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right; padding-bottom: 0.45em"></td>
+        </tr><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right; padding-bottom: 0.45em">\(\displaystyle 0\)</td>
+          <td style="white-space: nowrap; text-align: center; padding-bottom: 0.45em">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left; padding-bottom: 0.45em">\(\displaystyle \left[ \dfrac{c_1 x^3}{3} + \dfrac{2 c_2
+          x^4}{4} + \dfrac{3 c_3 x^5}{5} -
+\dfrac{3 x^5}{5} \right]^1_0\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right; padding-bottom: 0.45em"></td>
+        </tr><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right; padding-bottom: 0.45em">\(\displaystyle \)</td>
+          <td style="white-space: nowrap; text-align: center; padding-bottom: 0.45em">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left; padding-bottom: 0.45em">\(\displaystyle \dfrac{c_1}{3} + \dfrac{c_2}{2} +
+          \dfrac{3 c_3}{5} - \dfrac{3}{5}\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right; padding-bottom: 0.45em"><class style="font-style: normal">(9)</class><a id="eq-simE2"></a></td>
+        </tr><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right; padding-bottom: 0.45em">\(\displaystyle \langle x^3, R_{\Omega} \rangle\)</td>
+          <td style="white-space: nowrap; text-align: center; padding-bottom: 0.45em">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left; padding-bottom: 0.45em">\(\displaystyle \underset{0}{\overset{1}{\int}} x^3  (c_1
+          + 2 c_2 x + 3 c_3 x^2 - 3 x^2)
+\mathrm{d} x\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right; padding-bottom: 0.45em"></td>
+        </tr><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right; padding-bottom: 0.45em">\(\displaystyle 0\)</td>
+          <td style="white-space: nowrap; text-align: center; padding-bottom: 0.45em">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left; padding-bottom: 0.45em">\(\displaystyle \left[ \dfrac{c_1 x^4}{4} + \dfrac{2 c_2
+          x^5}{5} + \dfrac{3 c_3 x^6}{6} -
+\dfrac{3 x^6}{6} \right]^1_0\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right; padding-bottom: 0.45em"></td>
+        </tr><tr>
+          <td style="width: 33.3333333333333%; white-space: nowrap; padding-left: 0em; text-align: right">\(\displaystyle \)</td>
+          <td style="white-space: nowrap; text-align: center">\(\displaystyle =\)</td>
+          <td style="width: 66.6666666666667%; white-space: nowrap; text-align: center; text-align: left">\(\displaystyle \dfrac{c_1}{4} + \dfrac{2 c_2}{5} +
+          \dfrac{c_3}{2} - \dfrac{1}{2}\)</td>
+          <td style="white-space: nowrap; padding-right: 0em; text-align: right"><class style="font-style: normal">(10)</class><a id="eq-simE3"></a></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      Solving eqs (<a href="#eq-simE1">8</a>), (<a href="#eq-simE2">9</a>) and (<a href="#eq-simE3">10</a>)
+      simultaneously, we get
+    </p>
+    <center>
+      \begin{eqnarray*}
+  c_1 & = & 0\\
+  c_2 & = & 0\\
+  c_3 & = &
+      1
+\end{eqnarray*}
+    </center>
+    <p>
+      So the approximation is
+    </p>
+    <center>
+      \begin{eqnarray*}
+  \hat{y}  (x) & = & x^3
+\end{eqnarray*}
+    </center>
+    <p>
+      We were very fortunate to have our approximation turn out to be the
+      exact solution. This seldom happens in reality and hence we should
+      always treat the solution obtained as an approximate one for further
+      processing.
+    </p>
+    <h2 id="auto-12">4<span style="margin-left: 1em"></span>Summary<span style="margin-left: 1em"></span></h2>
+    <p>
+      In this article we learned
+    </p>
+    <ol>
+      <li>
+        <p>
+          What is domain residual?
+        </p>
+      </li>
+      <li>
+        <p>
+          Conceptual representation of the weighted residual
+        </p>
+      </li>
+      <li>
+        <p>
+          Obtaining approximation using weighted residuals
+        </p>
+      </li>
+    </ol>
+    <p>
+      <hr></hr>
+    </p>
+    <p>
+      &copy;Digvijay Patankar, 2022
+    </p>
+  </body>
+</html>
