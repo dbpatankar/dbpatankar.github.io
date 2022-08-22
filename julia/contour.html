@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:x="https://www.texmacs.org/2002/extensions" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <head>
+    <title>Julia: contour plots</title>
+    <meta content="TeXmacs 2.1.1" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; }
+    </style>
+    <link href="../mystyle.css" type="text/css" rel="stylesheet"></link>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" language="javascript"></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+
+      </p>
+      <p>
+
+      </p>
+    </div>
+    <table class="title-block" style="margin-bottom: 2em">
+      <tr>
+        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><font style="font-size: 168.2%"><strong>Julia: contour plots</strong></font></td>
+          </tr>
+        </table><div class="compact-block" style="margin-top: 1em; margin-bottom: 1em">
+          <table class="title-block">
+            <tr>
+              <td><p style="margin-top: 0.5em; margin-bottom: 0.5em">
+                <div style="display: inline">
+                  <span style="margin-left: 0pt"></span>
+                </div>
+                <table style="display: inline-table; vertical-align: middle">
+                  <tbody><tr>
+                    <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-bottom: 0em; padding-top: 0em; width: 100%"><center>
+                      <p>
+                        <class style="font-variant: small-caps">by Digvijay Patankar</class>
+                      </p>
+                    </center></td>
+                  </tr></tbody>
+                </table>
+              </p></td>
+            </tr>
+          </table>
+        </div></td>
+      </tr>
+    </table>
+    <h2>Table of contents<span style="margin-left: 1em"></span></h2>
+    <div class="compact-block" style="text-indent: 0em">
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>1<span style="margin-left: 1em"></span>Data</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2<span style="margin-left: 1em"></span>Add custom levels</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>3<span style="margin-left: 1em"></span>Lebels on contours</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-4">3</a>
+      </p>
+    </div>
+    <p>
+      <tt class="verbatim">Plots</tt> library in julia is very powerful for plotting and
+      I have rarely needed any other plotting library. However its
+      documentation seems lacking in explaining its features, especially when
+      you want to plot <tt class="verbatim">contours</tt>. So this page explains some of
+      the common features of the function <tt class="verbatim">contour()</tt> which I
+      need to use often.
+    </p>
+    <h2 id="auto-1">1<span style="margin-left: 1em"></span>Data<span style="margin-left: 1em"></span></h2>
+    <p>
+      Lets consider a grid as shown in Figure <a href="#fig:grid">1</a>. Each dot on the
+      grid is a point with (x, y) coordinate pair and has an associated value
+      of elevation of the point from ground level (z). The grid is spaced at
+      an interval of 1 unit in x and 0.5 unit in y.
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><img src="contour-1.png" style="margin-left: -0.0248242424242424em; margin-bottom: 0em; margin-right: -0.0248242424242449em; margin-top: 0em; vertical-align: -11.728em; height: 23.456em"></img></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 1. </b><a id="auto-2"></a>Grid with elevation at each point<a
+              id="fig:grid"></a>
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      Lets plot contours on this grid.
+    </p>
+    <div class="compact-block" style="margin-top: 0.5em; text-indent: 0em">
+      <p style="margin-top: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            _
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <p>
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            _       _ _(_)_     |  Documentation:
+            https://docs.julialang.org
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <p>
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            (_)     | (_) (_)    |
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <p>
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            _ _   _| |_  __ _   |  Type &quot;?&quot; for help,
+            &quot;]?&quot; for Pkg help.
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <p>
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            | | | | | | |/ _&lsquo; |  |
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <p>
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            | | |_| | | | (_| |  |  Version 1.7.3 (2022-05-06)
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <p>
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <p>
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            |__/                   |
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 0.5em; text-indent: 0em">
+      <p style="margin-bottom: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+x = 0:1:7</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="margin-top: 0.5em; margin-bottom: 0.5em; text-indent: 0em">
+      <p style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            0:1:7
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+y = 0:0.5:2</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="margin-top: 0.5em; margin-bottom: 0.5em; text-indent: 0em">
+      <p style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            0.0:0.5:2.0
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      And lets prepare the z matrix (note that the matrix is flipped
+      vertically!).
+    </p>
+    <div class="compact-block" style="margin-top: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+z = 0.5 .+ [102 103 102 104 96 102 100 102;
+  104 105 103 102 103 100 99 98;
+  99 102 103 104 97 98 99 98;
+  100 101 102 103 100 99 100 96;
+  101 100 102 104 98 97 95 96]</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="margin-top: 0.5em; text-indent: 0em">
+      <p style="margin-top: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            5&times;8 Matrix{Float64}:
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <p>
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            102.5  103.5  102.5  104.5   96.5  102.5  100.5  102.5
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <p>
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            104.5  105.5  103.5  102.5  103.5  100.5   99.5   98.5
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <p>
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            99.5  102.5  103.5  104.5   97.5   98.5   99.5   98.5
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <p>
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            100.5  101.5  102.5  103.5  100.5   99.5  100.5   96.5
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 0.5em; text-indent: 0em">
+      <p style="margin-bottom: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            101.5  100.5  102.5  104.5   98.5   97.5   95.5   96.5
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+using Plots</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+contour(x, y, z)</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="margin-top: 0.5em; margin-bottom: 0.5em; text-indent: 0em">
+      <p style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            <img src="contour-2.png" style="margin-left: -0.0248242424242424em; margin-bottom: -0.0248242424242424em; margin-right: -0.0248242424242413em; margin-top: 0em; vertical-align: 0em; height: 18.1445333333333em"></img>
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <h2 id="auto-3">2<span style="margin-left: 1em"></span>Add custom levels<span style="margin-left: 1em"></span></h2>
+    <p>
+      You can specify limits on contours i.e. the lowest contour and highest
+      contour using <tt class="verbatim">clims</tt>. Only contours within this range
+      will be plotted. The intermediate contour levels will be decided by the
+      library.
+    </p>
+    <div class="compact-block" style="margin-top: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+contour(x, y, z, clims=(100, 103))</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="margin-top: 0.5em; margin-bottom: 0.5em; text-indent: 0em">
+      <p style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            <img src="contour-3.png" style="margin-left: -0.0248242424242424em; margin-bottom: -0.0248242424242424em; margin-right: -0.0248242424242413em; margin-top: 0em; vertical-align: 0em; height: 18.1445333333333em"></img>
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      However if you want to have specific levels to be plotted then use <tt
+      class="verbatim">levels</tt> argument.
+    </p>
+    <div class="compact-block" style="margin-top: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+contour(x, y, z, levels=collect(95:1:105))</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="margin-top: 0.5em; margin-bottom: 0.5em; text-indent: 0em">
+      <p style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            <img src="contour-4.png" style="margin-left: -0.0248242424242424em; margin-bottom: -0.0248242424242424em; margin-right: -0.0248242424242413em; margin-top: 0em; vertical-align: 0em; height: 18.1445333333333em"></img>
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <h2 id="auto-4">3<span style="margin-left: 1em"></span>Lebels on contours<span style="margin-left: 1em"></span></h2>
+    <p>
+      Labels on each contour can be added by simply using <tt class="verbatim">contour_labels=true</tt>
+      in arguments.
+    </p>
+    <div class="compact-block" style="margin-top: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+contour(x, y, z, levels=collect(95:1:105), contour_labels=true)</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="margin-top: 0.5em; margin-bottom: 0.5em; text-indent: 0em">
+      <p style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            <img src="contour-5.png" style="margin-left: -0.0248242424242424em; margin-bottom: -0.0248242424242424em; margin-right: -0.0248242424242413em; margin-top: 0em; vertical-align: 0em; height: 18.1445333333333em"></img>
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      But what if you want some custom label to your contours and not the
+      values? In this particular case let's say you want the elevation with
+      respect to level of 100, i.e. a 101 contour should have label 1 and a 98
+      contour should have label \(- 2\). This is currently not possible with
+      default <tt class="verbatim">gr()</tt> backend. We need <tt class="verbatim">PyPlot</tt>
+      library for this. In order to ensure that this library doesn't overwrite
+      the functions from <tt class="verbatim">Plots</tt> library, we will import it and
+      use its functions with qualifier.
+    </p>
+    <div class="compact-block" style="margin-top: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+import PyPlot</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+levels = 95:105
+level_labels = [&quot;$(i-100)&quot; for i in levels];
+c1 = PyPlot.contour(x, y, z, levels=levels, contour_labels=true)</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="margin-top: 0.5em; margin-bottom: 0.5em; text-indent: 0em">
+      <p style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            PyObject &lt;matplotlib.contour.QuadContourSet object at
+            0x7fa6f7094250&gt;
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+PyPlot.clabel(c1, fmt=Dict(zip(levels, level_labels)), inline=1);</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+PyPlot.savefig(&quot;label_format.pdf&quot;)</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+PyPlot.close_figs()</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="margin-bottom: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><font color="#401000"><pre class="verbatim" xml:space="preserve">
+&gt;&gt;&gt; </pre></font></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><font color="#000080"><pre class="verbatim" xml:space="preserve">
+</pre></font></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      <img src="contour-6.png" style="margin-left: -0.0248242424242424em; margin-bottom: -0.0248242424242424em; margin-right: -0.0248242424242449em; margin-top: 0em; vertical-align: 0em; height: 22.0147878787879em"></img>
+    </p>
+    <p>
+      <hr></hr>
+    </p>
+    <p>
+      &copy; Digvijay Patankar, 2022
+    </p>
+  </body>
+</html>
