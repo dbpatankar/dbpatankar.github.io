@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fem on D-G-V-J</title>
+    <link>https://dbpatankar.github.io/tags/fem/</link>
+    <description>Recent content in fem on D-G-V-J</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Oct 2022 01:15:55 +0530</lastBuildDate><atom:link href="https://dbpatankar.github.io/tags/fem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Method of weighted residuals</title>
+      <link>https://dbpatankar.github.io/posts/fem-weighted-res/</link>
+      <pubDate>Sat, 01 Oct 2022 01:15:55 +0530</pubDate>
+      
+      <guid>https://dbpatankar.github.io/posts/fem-weighted-res/</guid>
+      <description>In Finite Element Method, the discussion often begins with something called as statement of weighted residuals. So let us explore what it means to me.
+Some background Let us say we have a differential equation given by \eqref{eq:gde} with boundary condition as $y = 0$ at $x = 0$ and let us restrict ourselves to the domain $x \in [0, 1]$. \begin{equation} \dfrac{\mathrm{d}y}{\mathrm{d}x} = 3 x^{2} \label{eq:gde} \end{equation}
+Solution of this differential equation can be obtained very easily by integrating both sides and then eliminating the constant term using boundary condition.</description>
+    </item>
+    
+  </channel>
+</rss>

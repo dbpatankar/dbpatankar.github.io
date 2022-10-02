@@ -1,0 +1,99 @@
+h2 { counter-increment: h2; }
+body {
+    counter-reset: figure-numbered table-numbered h2 h3 h4 h5 h6;
+    font-family: serif;
+}
+
+h1 {
+    color: darkmagenta;
+}
+
+h2 {
+    counter-increment: h2;
+    counter-reset: h3 h4 h5 h6;
+    line-height: 150%;
+    color: darkmagenta;
+    border-bottom: 2px solid darkmagenta;
+}
+h2::before { content: counter(h2, decimal) ". "; }
+
+h3 {
+    counter-increment: h3; counter-reset: h4 h5 h6;
+    line-height: 150%;
+    color: darkmagenta;
+}
+h3::before {
+    content: counter(h2, decimal)"."counter(h3, decimal) " ";
+}
+
+h4 {
+    counter-increment: h4; counter-reset: h5 h6;
+    color: darkmagenta;
+}
+h4::before {
+    content: counter(h2, decimal)"."counter(h3, decimal)"."counter(h4, decimal) " ";
+}
+
+h5 {
+    counter-increment: h5; counter-reset: h6;
+    color: darkmagenta;
+}
+h5::before {
+    content: ""; //counter(h5, decimal) " ";
+}
+
+h6 {
+    counter-increment: h6;
+    color: darkmagenta;
+}
+h6::before {
+    content: ""; //counter(h6, decimal) " ";
+}
+
+.post {
+    text-align: justify;
+}
+
+//main {counter-reset: table-numbered figure-numbered;}
+
+figure {
+    //border: thin #c0c0c0 solid;
+    display: block;
+    flex-flow: column;
+    padding: 5px;
+    //max-width: 220px;
+    margin: auto;
+}
+
+figcaption {
+    //background-color: #222;
+    //color: #fff;
+    font: smaller serif;
+    padding: 3px;
+    text-align: center;
+}
+
+/* For numbering figures and tables */
+/* first reset numbers in body tag above using any variable name (figure-numbered) */
+/* increment appropriate variable depending upon class */
+/* add number depending upon sibling (~) selector */
+.numfig {
+    counter-increment: figure-numbered;
+    max-width: 70%;
+    margin: auto;
+}
+
+.numtab {
+    counter-increment: table-numbered;
+}
+
+img ~ figcaption::before {
+    font-weight: bold;
+    content: "Figure " counter(figure-numbered, decimal)": ";
+}
+
+table ~ figcaption::before {
+    font-weight: bold;
+    content: "Table " counter(table-numbered, decimal)": ";
+}
+

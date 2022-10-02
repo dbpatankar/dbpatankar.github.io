@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>D-G-V-J</title>
+    <link>https://dbpatankar.github.io/</link>
+    <description>Recent content on D-G-V-J</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Oct 2022 18:55:13 +0530</lastBuildDate><atom:link href="https://dbpatankar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Professional and personal projects</title>
+      <link>https://dbpatankar.github.io/projects/</link>
+      <pubDate>Sat, 01 Oct 2022 22:07:48 +0530</pubDate>
+      
+      <guid>https://dbpatankar.github.io/projects/</guid>
+      <description>PhD thesis Title: Design of friction dampers for seismic response reduction in framed buildings. During an event of earthquake, buildings vibrate due to energy supplied by the earthquake. Supplemental dampers like friction dampers can be used to dissipate part of that energy so that the building has lesser input energy for vibration. My work provides an easy and effective method of design of friction damper for a given building at a given location.</description>
+    </item>
+    
+    <item>
+      <title>Julia: contour plots</title>
+      <link>https://dbpatankar.github.io/posts/julia-contour/</link>
+      <pubDate>Sat, 01 Oct 2022 18:55:13 +0530</pubDate>
+      
+      <guid>https://dbpatankar.github.io/posts/julia-contour/</guid>
+      <description>Plots library in julia is very powerful for plotting and I have rarely needed any other plotting library. However its documentation seems lacking in explaining its features, especially when you want to plot contours. So this page explains some of the common features of the function contour() which I need to use often.
+Data Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z).</description>
+    </item>
+    
+    <item>
+      <title>Method of weighted residuals</title>
+      <link>https://dbpatankar.github.io/posts/fem-weighted-res/</link>
+      <pubDate>Sat, 01 Oct 2022 01:15:55 +0530</pubDate>
+      
+      <guid>https://dbpatankar.github.io/posts/fem-weighted-res/</guid>
+      <description>In Finite Element Method, the discussion often begins with something called as statement of weighted residuals. So let us explore what it means to me.
+Some background Let us say we have a differential equation given by \eqref{eq:gde} with boundary condition as $y = 0$ at $x = 0$ and let us restrict ourselves to the domain $x \in [0, 1]$. \begin{equation} \dfrac{\mathrm{d}y}{\mathrm{d}x} = 3 x^{2} \label{eq:gde} \end{equation}
+Solution of this differential equation can be obtained very easily by integrating both sides and then eliminating the constant term using boundary condition.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://dbpatankar.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dbpatankar.github.io/about/</guid>
+      <description>I am Digvijay Patankar, currently a research scholar in the Department of Earthquake Engineering at Indian Institute of Technology, Roorkee, India. I am trying to figure out an effective and easy design strategy for the friction dampers to be used in buildings. During an event of earthquake, these dampers are expected to dissipate some of the energy supplied by earthquake to the structure. This will reduce the damage to structure in case of a severe earthquake.</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://dbpatankar.github.io/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dbpatankar.github.io/publications/</guid>
+      <description> Ramadasa, A., Basappa, V., Chakragiri, S. V., &amp;amp; Patankar, D. B. (2022). Geospatial Approach for Integrated Command Area Management. Journal of Irrigation and Drainage Engineering, 148(4), 04022003. </description>
+    </item>
+    
+  </channel>
+</rss>

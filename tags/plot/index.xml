@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>plot on D-G-V-J</title>
+    <link>https://dbpatankar.github.io/tags/plot/</link>
+    <description>Recent content in plot on D-G-V-J</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Oct 2022 18:55:13 +0530</lastBuildDate><atom:link href="https://dbpatankar.github.io/tags/plot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Julia: contour plots</title>
+      <link>https://dbpatankar.github.io/posts/julia-contour/</link>
+      <pubDate>Sat, 01 Oct 2022 18:55:13 +0530</pubDate>
+      
+      <guid>https://dbpatankar.github.io/posts/julia-contour/</guid>
+      <description>Plots library in julia is very powerful for plotting and I have rarely needed any other plotting library. However its documentation seems lacking in explaining its features, especially when you want to plot contours. So this page explains some of the common features of the function contour() which I need to use often.
+Data Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z).</description>
+    </item>
+    
+  </channel>
+</rss>
