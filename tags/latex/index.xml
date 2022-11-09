@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>latex on D-G-V-J</title>
+    <link>https://dbpatankar.github.io/tags/latex/</link>
+    <description>Recent content in latex on D-G-V-J</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Nov 2022 14:07:22 +0530</lastBuildDate><atom:link href="https://dbpatankar.github.io/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nuances of $\LaTeX$ typesetting - d for derivative</title>
+      <link>https://dbpatankar.github.io/posts/latex-nuances-derivative/</link>
+      <pubDate>Wed, 09 Nov 2022 14:07:22 +0530</pubDate>
+      
+      <guid>https://dbpatankar.github.io/posts/latex-nuances-derivative/</guid>
+      <description>If you often use $\LaTeX$ for typesetting math then you probably have come across the issue of typesetting d of infinitesimal small quantity dx. As per the standards, the d should be typed upright. But if you write dx in $\LaTeX$ math mode as $dx$, it will result in tilted d. In this article, we will explore a few ways of typesetting the d correctly in $\LaTeX$ math environment.</description>
+    </item>
+    
+  </channel>
+</rss>

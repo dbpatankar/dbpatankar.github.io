@@ -97,3 +97,14 @@ table ~ figcaption::before {
     content: "Table " counter(table-numbered, decimal)": ";
 }
 
+.highlight {
+    background-color: white !important;
+}
+
+.src {
+    background-color: white !important;
+}
+
+pre {
+    background-color: green !important;
+}

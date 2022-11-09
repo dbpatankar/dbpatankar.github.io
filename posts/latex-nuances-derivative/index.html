@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+<script>
+MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        tags: 'ams',
+    },
+    chtml: {
+        scale: 1.0,
+    }
+};
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<link rel="stylesheet" href="https://dbpatankar.github.io/css/mySite.css">
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    
+    <link rel="canonical" href="https://dbpatankar.github.io/posts/latex-nuances-derivative/">
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.103.0" />
+
+    
+    
+    
+
+<title>Nuances of $\LaTeX$ typesetting - d for derivative • D-G-V-J</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Nuances of $\LaTeX$ typesetting - d for derivative"/>
+<meta name="twitter:description" content="If you often use $\LaTeX$ for typesetting math then you probably have come across the issue of typesetting d of infinitesimal small quantity dx. As per the standards, the d should be typed upright. But if you write dx in $\LaTeX$ math mode as $dx$, it will result in tilted d. In this article, we will explore a few ways of typesetting the d correctly in $\LaTeX$ math environment."/>
+
+<meta property="og:title" content="Nuances of $\LaTeX$ typesetting - d for derivative" />
+<meta property="og:description" content="If you often use $\LaTeX$ for typesetting math then you probably have come across the issue of typesetting d of infinitesimal small quantity dx. As per the standards, the d should be typed upright. But if you write dx in $\LaTeX$ math mode as $dx$, it will result in tilted d. In this article, we will explore a few ways of typesetting the d correctly in $\LaTeX$ math environment." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dbpatankar.github.io/posts/latex-nuances-derivative/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-09T14:07:22+05:30" />
+<meta property="article:modified_time" content="2022-11-09T14:07:22+05:30" />
+
+
+
+    
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.909f51576ca50f23157cff821fba194a7c7834207d28b9ad4ef6cc2cde54e94b.css" integrity="sha256-kJ9RV2ylDyMVfP&#43;CH7oZSnx4NCB9KLmtTvbMLN5U6Us=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://dbpatankar.github.io/">
+        
+          D-G-V-J
+        
+        </a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="https://dbpatankar.github.io/images/dp.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+         A civilized programmer 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">D-G-V-J</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Home</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/about">
+						<span>About Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/publications">
+						<span>Publications</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/projects">
+						<span>Projects</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a target="_blank" href="https://twitter.com/dbpatankar" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	<a target="_blank" href="https://github.com/dbpatankar" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a target="_blank" href="https://bitbucket.org/dbpatankar" rel="me"><i class="fab fa-bitbucket fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	<a target="_blank" href="https://linkedin.com/in/digvijay-patankar-1b191518" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a target="_blank" href="https://youtube.com/dbpatankar" rel="me"><i class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2022 Digvijay Patankar. All rights reserved.
+  
+</div>
+
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Nuances of $\LaTeX$ typesetting - d for derivative</h1>
+    
+    
+<div class="post__meta">
+    
+    
+    <i class="fas fa-user-edit"></i> Digvijay Patankar
+    
+    </br>
+    
+    
+      <i class="fas fa-calendar-alt"></i> Nov 09, 2022
+    
+    
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="/tags/latex">latex</a>
+          
+      
+    
+    
+    <br/>
+    
+</div>
+
+
+  </header>
+  
+  
+  
+    <div class="toc-wrapper">
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">The basic way</a>
+</li>
+<li><a href="#headline-2">Using <code>physics</code> package</a>
+</li>
+</ul>
+</nav>
+      
+    </div>
+  
+  
+  <div class="post">
+    
+<p>
+If you often use $\LaTeX$ for typesetting math then you probably have come across the issue of typesetting <code>d</code> of infinitesimal small quantity <code>dx</code>.  As per the standards, the <code>d</code> should be typed upright. But if you write <code>dx</code> in $\LaTeX$ math mode as <code>$dx$</code>, it will result in tilted <em><code>d</code></em>. In this article, we will explore a few ways of typesetting the <code>d</code> correctly in $\LaTeX$ math environment.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+The basic way
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>This is the first method that comes to my mind because it is straightforward and does not require loading additional packages. Use <code>$\text{d}x$</code> instead of <code>$dx$</code>.</p>
+<div class="src src-latex">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#e6db74">$</span> dx \ne \text{d}x <span style="color:#e6db74">$</span></span></span></code></pre></div>
+</div>
+<p>RESULTS:
+$dx \ne \text{d}x$</p>
+<p>
+One can also use <code>$\mathrm{d}x$</code> instead of <code>$\text{d}x$</code>. Although there is slight difference in both typesetting logic, in this case with default fonts, both will have same output. I prefer <code>$\mathrm{d}x$</code> over <code>$\text{d}x$</code></p>
+<div class="src src-latex">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#e6db74">$</span> dx \ne \mathrm{d}x <span style="color:#e6db74">$</span></span></span></code></pre></div>
+</div>
+<p>RESULTS:
+$dx \ne \mathrm{d}x$</p>
+<p>
+Though this method works perfectly, you will find it makes the equation look too cumbrous in it&#39;s source form. If you need to write too many derivatives, instead of writing upright <code>d</code> everytime using such big command, you can make use of $\LaTeX$&#39;s <code>\newcommand</code> to define a new short command to typeset the above code. This can be done by</p>
+<div class="src src-latex">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\d</span>}{<span style="color:#66d9ef">\mathrm</span>{d}}</span></span></code></pre></div>
+</div>
+<p>Now you can simply use <code>\d</code> and it will print upright <code>d</code> as shown below.</p>
+<div class="src src-latex">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#e6db74">$</span> dx \ne \d x <span style="color:#e6db74">$</span></span></span></code></pre></div>
+</div>
+<p>RESULTS: $dx \ne \mathrm{d}x$</p>
+<p>
+But what if you are writing a differential equation? You need to repeat the <code>\d</code> macro multiple time along with order of derivative. Also, if you are also dealing with partial derivatives, then you may need to write a few more macros. Though doing it is possible, it is often easier and cleaner to use separate package for such tasks. One such package to handle derivatives is <code>physics</code>.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Using <code>physics</code> package
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>To use this package, simply use <code>\usepackage{physics}</code> in the preamble of the latex document. Now you have many commands which will help you in typesetting derivatives the right way. For example, the quantity <code>dx</code> can be written as <code>\dd x</code> or <code>\dd{x}</code>. Not just this but the package has many other useful macros which can be used to typeset the derivatives correctly and easily. Some of the most commonly used macros are given in table below.</p>
+<table>
+<thead>
+<tr>
+<th>$\LaTeX$ code</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\dd x</td>
+<td>$\mathrm{d} x$</td>
+</tr>
+<tr>
+<td>\dd[n]{x}</td>
+<td>$\mathrm{d}^{n}x$</td>
+</tr>
+<tr>
+<td>\dv{x}</td>
+<td>$\dfrac{\mathrm{d}}{\mathrm{d}x}$</td>
+</tr>
+<tr>
+<td>\dv{f}{x}</td>
+<td>$\dfrac{\mathrm{d}f}{\mathrm{d}x}$</td>
+</tr>
+<tr>
+<td>\dv[n]{f}{x}</td>
+<td>$\dfrac{\mathrm{d}^{n}f}{\mathrm{d}x}$</td>
+</tr>
+<tr>
+<td>\pdv{x}</td>
+<td>$\dfrac{\partial}{\partial x}$</td>
+</tr>
+<tr>
+<td>\pdv{f}{x}</td>
+<td>$\dfrac{\partial f}{\partial x}$</td>
+</tr>
+<tr>
+<td>\pdv[n]{f}{x}</td>
+<td>$\dfrac{\partial^{n}f}{\partial x}$</td>
+</tr>
+</tbody>
+</table>
+<p>
+You can see that the <code>physics</code> package makes typesetting derivatives very intuitive. There are many other macros in this package that can be used to typeset some other important stuff. You can read documentation of the package <a href="https://mirrors.ibiblio.org/CTAN/macros/latex/contrib/physics/physics.pdf">here</a>.</p>
+</div>
+</div>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/posts/julia-contour/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Julia: contour plots</span>
+    </a>
+    
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
+
+
+
+
+
+
+    
+
+
+
+    </body>
+</html>

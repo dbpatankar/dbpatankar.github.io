@@ -1,0 +1,62 @@
+% Created 2022-11-10 Thu 00:56
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{minted}
+\usepackage{ifthen} \usepackage{physics}
+\author{Digvijay Patankar}
+\date{2022-11-09T14:07:22+05:30}
+\title{Nuances of \(\LaTeX\) typesetting - d for derivative}
+\hypersetup{
+ pdfauthor={Digvijay Patankar},
+ pdftitle={Nuances of \(\LaTeX\) typesetting - d for derivative},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.1.90 (Org mode 9.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+If you often use \(\LaTeX\) for typesetting math then you probably have come across the issue of typesetting \texttt{d} of infinitesimal small quantity \texttt{dx}.  As per the standards, the \texttt{d} should be typed upright. But if you write \texttt{dx} in \(\LaTeX\) math mode as \texttt{\$dx\$}, it will result in tilted \emph{\texttt{d}}. In this article, we will explore a few ways of typesetting the \texttt{d} correctly in \(\LaTeX\) math environment.
+
+\section{The basic way}
+\label{sec:orgb3a18ae}
+This is the first method that comes to my mind because it is straightforward and does not require loading additional packages. Use \texttt{\$\textbackslash{}text\{d\}x\$} instead of \texttt{\$dx\$}.
+\begin{minted}[]{latex}
+$ dx \ne \text{d}x $
+\end{minted}
+RESULTS:
+\(dx \ne \text{d}x\)
+
+One can also use \texttt{\$\textbackslash{}mathrm\{d\}x\$} instead of \texttt{\$\textbackslash{}text\{d\}x\$}. Although there is slight difference in both typesetting logic, in this case with default fonts, both will have same output. I prefer \texttt{\$\textbackslash{}mathrm\{d\}x\$} over \texttt{\$\textbackslash{}text\{d\}x\$}
+\begin{minted}[]{latex}
+$ dx \ne \mathrm{d}x $
+\end{minted}
+RESULTS:
+\(dx \ne \mathrm{d}x\)
+
+Though this method works perfectly, you will find it makes the equation look too cumbrous in it's source form. If you need to write too many derivatives, instead of writing upright \texttt{d} everytime using such big command, you can make use of \(\LaTeX\)'s \texttt{\textbackslash{}newcommand} to define a new short command to typeset the above code. This can be done by
+\begin{minted}[]{latex}
+\newcommand{\d}{\mathrm{d}}
+\end{minted}
+Now you can simply use \texttt{\textbackslash{}d} and it will print upright \texttt{d} as required.
+
+But what if you are writing a differential equation? You need to repeat the \texttt{\textbackslash{}d} macro multiple time along with order of derivative. Also, if you are also dealing with partial derivatives, then you may need to write a few more macros. Though doing it is possible, it is often easier and cleaner to use separate package for such tasks. One such package to handle derivatives is \texttt{physics}.
+
+\section{Using \texttt{physics} package}
+\label{sec:org7a7c725}
+To use this package, simply use \texttt{\textbackslash{}usepackage\{physics\}} in the preamble of the latex document. Now you have many commands which will help you in typesetting derivatives the right way. For example, the quantity \texttt{dx} can be written as \(\dd x\)
+\end{document}
