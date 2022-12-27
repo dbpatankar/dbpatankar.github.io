@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>plots on D-G-V-J</title>
+    <link>https://dbpatankar.github.io/tags/plots/</link>
+    <description>Recent content in plots on D-G-V-J</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Dec 2022 00:50:30 +0530</lastBuildDate><atom:link href="https://dbpatankar.github.io/tags/plots/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nuances of $\LaTeX$ typesetting: p for plots</title>
+      <link>https://dbpatankar.github.io/posts/latex-nuances-plots/</link>
+      <pubDate>Thu, 15 Dec 2022 00:50:30 +0530</pubDate>
+      
+      <guid>https://dbpatankar.github.io/posts/latex-nuances-plots/</guid>
+      <description>It is almost always required to make some plots if you are presenting data. In this article, we will explore a few ways to make your plots production quality and integrate it with your articles. Among the multiple ways of generating plots, we will explore three
+using python-matplotlib using gnuplot using pgfplots package Plots using python-matplotlib I am using python and matplotlib combo because I think this might be the most widely used combo for plotting.</description>
+    </item>
+    
+  </channel>
+</rss>

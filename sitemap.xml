@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dbpatankar.github.io/tags/config/</loc>
+    <lastmod>2022-12-28T03:41:50+05:30</lastmod>
+  </url><url>
     <loc>https://dbpatankar.github.io/</loc>
-    <lastmod>2022-11-09T14:07:22+05:30</lastmod>
+    <lastmod>2022-12-28T03:41:50+05:30</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/tags/emacs/</loc>
+    <lastmod>2022-12-28T03:41:50+05:30</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/posts/my-custom-emacs-config/</loc>
+    <lastmod>2022-12-28T03:41:50+05:30</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/posts/</loc>
+    <lastmod>2022-12-28T03:41:50+05:30</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/tags/</loc>
+    <lastmod>2022-12-28T03:41:50+05:30</lastmod>
   </url><url>
     <loc>https://dbpatankar.github.io/tags/latex/</loc>
     <lastmod>2022-11-09T14:07:22+05:30</lastmod>
   </url><url>
     <loc>https://dbpatankar.github.io/posts/latex-nuances-derivative/</loc>
-    <lastmod>2022-11-09T14:07:22+05:30</lastmod>
-  </url><url>
-    <loc>https://dbpatankar.github.io/posts/</loc>
-    <lastmod>2022-11-09T14:07:22+05:30</lastmod>
-  </url><url>
-    <loc>https://dbpatankar.github.io/tags/</loc>
     <lastmod>2022-11-09T14:07:22+05:30</lastmod>
   </url><url>
     <loc>https://dbpatankar.github.io/projects/</loc>

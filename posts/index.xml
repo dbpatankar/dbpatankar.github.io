@@ -6,7 +6,16 @@
     <description>Recent content in Posts on D-G-V-J</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Nov 2022 14:07:22 +0530</lastBuildDate><atom:link href="https://dbpatankar.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Dec 2022 03:41:50 +0530</lastBuildDate><atom:link href="https://dbpatankar.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My custom emacs config</title>
+      <link>https://dbpatankar.github.io/posts/my-custom-emacs-config/</link>
+      <pubDate>Wed, 28 Dec 2022 03:41:50 +0530</pubDate>
+      
+      <guid>https://dbpatankar.github.io/posts/my-custom-emacs-config/</guid>
+      <description>When I started learning/using linux, choice of text editor was an alien concept to me. So I used whichever editor I found first. I liked kate a lot and used it for a long time until I discovered vim and its powers. Since then I have been using vim and have no major deal-breaking issues with it. Yet somehow curiosity made me explore GNU emacs. And now for past one year I am using GNU emacs for all the text editing stuff.</description>
+    </item>
+    
     <item>
       <title>Nuances of $\LaTeX$ typesetting - d for derivative</title>
       <link>https://dbpatankar.github.io/posts/latex-nuances-derivative/</link>
