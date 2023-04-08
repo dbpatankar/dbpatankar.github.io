@@ -31,7 +31,7 @@
       <pubDate>Sat, 01 Oct 2022 22:07:48 +0530</pubDate>
       
       <guid>https://dbpatankar.github.io/projects/</guid>
-      <description>PhD thesis Title: Design of friction dampers for seismic response reduction in framed buildings. During an event of earthquake, buildings vibrate due to energy supplied by the earthquake. Supplemental dampers like friction dampers can be used to dissipate part of that energy so that the building has lesser input energy for vibration. My work provides an easy and effective method of design of friction damper for a given building at a given location.</description>
+      <description>Python programming Developer and maintainer of python package PEGMA: Package for Exploratory Ground Motion Analysis. This is a package with GUI for analyzing ground motions. The package does not simply find the characteristics of ground motions, but it can perform some exploratory analysis on it. Developer and maintainer of python package earthquakepy. The package is intended to assist seismologists and earthquake engineers in their day-to-day tasks. Developed a small GUI app to plot correlation between rainfall data (ascii) and temperature data (netCDF file), given season, year range etc.</description>
     </item>
     
     <item>
