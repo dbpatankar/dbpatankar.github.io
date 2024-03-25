@@ -1,0 +1,131 @@
+body {
+    counter-reset: figure-numbered table-numbered h2c;
+    font-family: serif;
+}
+
+h1 {
+    color: #ffffff !important;
+}
+h2 {
+    counter-reset: h3c 0;
+    counter-increment: h2c;
+    line-height: 150%;
+    color: #ffffff !important;
+    border-bottom: 2px solid darkmagenta;
+}
+h2:before {
+    content: counter(h2c, decimal) ". ";
+}
+h3 {
+    counter-reset: h4c;
+    counter-increment: h3c;
+    line-height: 150%;
+    color: #ffffff;
+}
+h3:before {
+    content: counter(h2c, decimal)"."counter(h3c, decimal) " ";
+}
+h4 {
+    counter-increment: h4c;
+    counter-reset: h5c;
+    color: #ffffff;
+}
+h4:before {
+    content: counter(h2c, decimal)"."counter(h3c, decimal)"."counter(h4c, decimal) " ";
+}
+h5 {
+    counter-increment: h5c;
+    counter-reset: h6c;
+    color: #ffffff;
+}
+h5:before {
+    content: ""; //counter(h5c, decimal) " ";
+}
+h6 {
+    counter-increment: h6c;
+    color: #ffffff;
+}
+h6:before {
+    content: ""; //counter(h6c, decimal) " ";
+}
+
+.post {
+    text-align: justify;
+}
+
+//main {counter-reset: table-numbered figure-numbered;}
+
+figure {
+    display: block;
+    flex-flow: column;
+    padding: 5px;
+    margin: auto auto !important;
+}
+
+figcaption {
+    /*background-color: #222222;*/
+    color: gold;
+    font-style: italic;
+    padding: 3px;
+    text-align: center;
+    font-size: large;
+    font-family: sans-serif;
+}
+
+/* For numbering figures and tables */
+/* first reset numbers in body tag above using any variable name (figure-numbered) */
+/* increment appropriate variable depending upon class */
+/* add number depending upon sibling (~) selector */
+.numfig {
+    counter-increment: figure-numbered;
+    max-width: 70%;
+    margin: auto;
+}
+
+.numtab {
+    counter-increment: table-numbered;
+}
+
+img ~ figcaption::before {
+    font-weight: bold;
+    content: "Figure " counter(figure-numbered, decimal)": ";
+}
+
+img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+table ~ figcaption::before {
+    font-weight: bold;
+    content: "Table " counter(table-numbered, decimal)": ";
+}
+
+.highlight {
+    background-color: white !important;
+}
+
+.src {
+    background-color: white !important;
+}
+
+
+
+pre {
+    max-height: 200px;
+}
+
+
+.example {
+    background-color: #000 !important;
+    color: #ff90ff !important;
+    line-height: 2.0 !important;
+}
+
+table {
+    background-color: #f0f0f0;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto !important;
+}

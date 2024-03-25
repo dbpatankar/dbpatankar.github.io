@@ -6,7 +6,16 @@
     <description>Recent content in Posts on D-V-J</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Dec 2022 03:41:50 +0530</lastBuildDate><atom:link href="https://dbpatankar.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dbpatankar.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My name is Bond, Electoral Bond.</title>
+      <link>https://dbpatankar.github.io/posts/electoral-bonds/</link>
+      <pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dbpatankar.github.io/posts/electoral-bonds/</guid>
+      <description>The honourable Supreme Court of India had ordered the State Bank of India (SBI) to provide all the details of electoral bonds to the Election Commission of India (ECI), who was then required to make it public. After initial hesitation, SBI finally provided all the details and ECI has published those details on their website. Out of curiosity, I downloaded the data and visualized it. This post is just a part of that visualization.</description>
+    </item>
+    
     <item>
       <title>My custom emacs config</title>
       <link>https://dbpatankar.github.io/posts/my-custom-emacs-config/</link>
@@ -32,7 +41,7 @@
       
       <guid>https://dbpatankar.github.io/posts/julia-contour/</guid>
       <description>Plots library in julia is very powerful for plotting and I have rarely needed any other plotting library. However its documentation seems lacking in explaining its features, especially when you want to plot contours. So this page explains some of the common features of the function contour() which I need to use often.
-Data Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z).</description>
+Data  Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z).</description>
     </item>
     
     <item>
@@ -42,8 +51,7 @@ Data Lets consider a grid as shown in figure below. Each dot on the grid is a po
       
       <guid>https://dbpatankar.github.io/posts/fem-weighted-res/</guid>
       <description>In Finite Element Method, the discussion often begins with something called as statement of weighted residuals. So let us explore what it means to me.
-Some background Let us say we have a differential equation given by \eqref{eq:gde} with boundary condition as $y = 0$ at $x = 0$ and let us restrict ourselves to the domain $x \in [0, 1]$. \begin{equation} \dfrac{\mathrm{d}y}{\mathrm{d}x} = 3 x^{2} \label{eq:gde} \end{equation}
-Solution of this differential equation can be obtained very easily by integrating both sides and then eliminating the constant term using boundary condition.</description>
+Some background  Let us say we have a differential equation given by \eqref{eq:gde} with boundary condition as $y = 0$ at $x = 0$ and let us restrict ourselves to the domain $x \in [0, 1]$. \begin{equation} \dfrac{\mathrm{d}y}{\mathrm{d}x} = 3 x^{2} \label{eq:gde} \end{equation}</description>
     </item>
     
   </channel>

@@ -6,7 +6,16 @@
     <description>Recent content on D-V-J</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Dec 2022 03:41:50 +0530</lastBuildDate><atom:link href="https://dbpatankar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dbpatankar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My name is Bond, Electoral Bond.</title>
+      <link>https://dbpatankar.github.io/posts/electoral-bonds/</link>
+      <pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dbpatankar.github.io/posts/electoral-bonds/</guid>
+      <description>The honourable Supreme Court of India had ordered the State Bank of India (SBI) to provide all the details of electoral bonds to the Election Commission of India (ECI), who was then required to make it public. After initial hesitation, SBI finally provided all the details and ECI has published those details on their website. Out of curiosity, I downloaded the data and visualized it. This post is just a part of that visualization.</description>
+    </item>
+    
     <item>
       <title>My custom emacs config</title>
       <link>https://dbpatankar.github.io/posts/my-custom-emacs-config/</link>
@@ -31,7 +40,7 @@
       <pubDate>Sat, 01 Oct 2022 22:07:48 +0530</pubDate>
       
       <guid>https://dbpatankar.github.io/projects/</guid>
-      <description>Python programming Developer and maintainer of python package PEGMA: Package for Exploratory Ground Motion Analysis. This is a package with GUI for analyzing ground motions. The package does not simply find the characteristics of ground motions, but it can perform some exploratory analysis on it. Developer and maintainer of python package earthquakepy. The package is intended to assist seismologists and earthquake engineers in their day-to-day tasks. Developed a small GUI app to plot correlation between rainfall data (ascii) and temperature data (netCDF file), given season, year range etc.</description>
+      <description>earthquakepy  Motivation  This is an open source python library I am co-developing and maintaining. Being a researcher in Earthquake Engineering, I had to deal with many ground motion records on a daily basis. The records came from different sources and had different format. So, every time I had to use that data, I would write a small script. This resulted in having multiple scripts scattered on my HDD doing essentially the same work.</description>
     </item>
     
     <item>
@@ -41,7 +50,7 @@
       
       <guid>https://dbpatankar.github.io/posts/julia-contour/</guid>
       <description>Plots library in julia is very powerful for plotting and I have rarely needed any other plotting library. However its documentation seems lacking in explaining its features, especially when you want to plot contours. So this page explains some of the common features of the function contour() which I need to use often.
-Data Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z).</description>
+Data  Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z).</description>
     </item>
     
     <item>
@@ -51,8 +60,7 @@ Data Lets consider a grid as shown in figure below. Each dot on the grid is a po
       
       <guid>https://dbpatankar.github.io/posts/fem-weighted-res/</guid>
       <description>In Finite Element Method, the discussion often begins with something called as statement of weighted residuals. So let us explore what it means to me.
-Some background Let us say we have a differential equation given by \eqref{eq:gde} with boundary condition as $y = 0$ at $x = 0$ and let us restrict ourselves to the domain $x \in [0, 1]$. \begin{equation} \dfrac{\mathrm{d}y}{\mathrm{d}x} = 3 x^{2} \label{eq:gde} \end{equation}
-Solution of this differential equation can be obtained very easily by integrating both sides and then eliminating the constant term using boundary condition.</description>
+Some background  Let us say we have a differential equation given by \eqref{eq:gde} with boundary condition as $y = 0$ at $x = 0$ and let us restrict ourselves to the domain $x \in [0, 1]$. \begin{equation} \dfrac{\mathrm{d}y}{\mathrm{d}x} = 3 x^{2} \label{eq:gde} \end{equation}</description>
     </item>
     
     <item>
@@ -61,7 +69,7 @@ Solution of this differential equation can be obtained very easily by integratin
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dbpatankar.github.io/about/</guid>
-      <description>I am Digvijay Patankar, currently a research scholar in the Department of Earthquake Engineering at Indian Institute of Technology, Roorkee, India. I am trying to figure out an effective and easy design strategy for the friction dampers to be used in buildings. During an event of earthquake, these dampers are expected to dissipate some of the energy supplied by earthquake to the structure. This will reduce the damage to structure in case of a severe earthquake.</description>
+      <description>I am academically trained as a structural engineer with expertise in earthquake engineering (or thats what I like to believe). During my PhD, I have worked on design of friction dampers in multistorey framed buildings for seismic response reduction. I have interest in astronomy, computers, programming and linux-world. I believe that everything is boring until you dive deeper into it and I find geotechnical engineering boring :D.</description>
     </item>
     
     <item>
@@ -70,7 +78,7 @@ Solution of this differential equation can be obtained very easily by integratin
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dbpatankar.github.io/publications/</guid>
-      <description> Ramadasa, A., Basappa, V., Chakragiri, S. V., &amp;amp; Patankar, D. B. (2022). Geospatial Approach for Integrated Command Area Management. Journal of Irrigation and Drainage Engineering, 148(4), 04022003. </description>
+      <description> Patankar, D., Shrikhande, M., &amp;amp; Chatzis, M. (2023). Design considerations and optimum parameters of a friction damper in sdof systems for seismic response reduction. Journal of Earthquake Engineering, (), 1–13. http://dx.doi.org/10.1080/13632469.2023.2239369 Ramadasa, A., Basappa, V., Chakragiri, S. V., &amp;amp; Patankar, D. B. (2022). Geospatial approach for integrated command area management. Journal of Irrigation and Drainage Engineering, 148(4), 04022003. http://dx.doi.org/10.1061/(ASCE)IR.1943-4774.0001659  </description>
     </item>
     
   </channel>

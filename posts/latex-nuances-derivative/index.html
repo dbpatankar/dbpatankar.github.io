@@ -19,7 +19,7 @@ MathJax = {
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
-<link rel="stylesheet" href="https://dbpatankar.github.io/css/mySite.css">
+<link rel="stylesheet" href="https://dbpatankar.github.io/css/myMod.css">
     <link href="https://gmpg.org/xfn/11" rel="profile">
     
     <link rel="canonical" href="https://dbpatankar.github.io/posts/latex-nuances-derivative/">
@@ -28,7 +28,7 @@ MathJax = {
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.103.0" />
+<meta name="generator" content="Hugo 0.92.2" />
 
     
     
@@ -57,10 +57,10 @@ MathJax = {
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.909f51576ca50f23157cff821fba194a7c7834207d28b9ad4ef6cc2cde54e94b.css" integrity="sha256-kJ9RV2ylDyMVfP&#43;CH7oZSnx4NCB9KLmtTvbMLN5U6Us=">
+<link rel="stylesheet" href="/scss/hyde-hyde.3cf38b10033a14a33ff2449e3f1e2a593a1e09e87e1f70fa632413e909a50f43.css" integrity="sha256-PPOLEAM6FKM/8kSePx4qWToeCeh&#43;H3D6YyQT6QmlD0M=">
 
 
-<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+<link rel="stylesheet" href="/scss/print.e5f87aa9d406c09ad1cb0284b65f42c7e53ea92dc1fe9b6ab366bba96a1344e9.css" integrity="sha256-5fh6qdQGwJrRywKEtl9Cx&#43;U&#43;qS3B/ptqs2a7qWoTROk=" media="print">
 
 
 
@@ -145,14 +145,6 @@ MathJax = {
 					</a>
 				</li>
 			 
-		 
-			 
-				<li>
-					<a href="/publications">
-						<span>Publications</span>
-					</a>
-				</li>
-			 
 		
 	</ul>
 </div>
@@ -197,7 +189,7 @@ MathJax = {
     </div>
     
 <div class="copyright">
-  &copy; 2023 Digvijay Patankar. All rights reserved.
+  &copy; 2024 Digvijay Patankar. All rights reserved.
   
 </div>
 
@@ -271,25 +263,25 @@ The basic way
 <div id="outline-text-headline-1" class="outline-text-2">
 <p>This is the first method that comes to my mind because it is straightforward and does not require loading additional packages. Use <code>$\text{d}x$</code> instead of <code>$dx$</code>.</p>
 <div class="src src-latex">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#e6db74">$</span> dx \ne \text{d}x <span style="color:#e6db74">$</span></span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#e6db74">$</span> dx \ne \text{d}x <span style="color:#e6db74">$</span></code></pre></div>
 </div>
 <p>RESULTS:
 $dx \ne \text{d}x$</p>
 <p>
 One can also use <code>$\mathrm{d}x$</code> instead of <code>$\text{d}x$</code>. Although there is slight difference in both typesetting logic, in this case with default fonts, both will have same output. I prefer <code>$\mathrm{d}x$</code> over <code>$\text{d}x$</code></p>
 <div class="src src-latex">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#e6db74">$</span> dx \ne \mathrm{d}x <span style="color:#e6db74">$</span></span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#e6db74">$</span> dx \ne \mathrm{d}x <span style="color:#e6db74">$</span></code></pre></div>
 </div>
 <p>RESULTS:
 $dx \ne \mathrm{d}x$</p>
 <p>
 Though this method works perfectly, you will find it makes the equation look too cumbrous in it&#39;s source form. If you need to write too many derivatives, instead of writing upright <code>d</code> everytime using such big command, you can make use of $\LaTeX$&#39;s <code>\newcommand</code> to define a new short command to typeset the above code. This can be done by</p>
 <div class="src src-latex">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\d</span>}{<span style="color:#66d9ef">\mathrm</span>{d}}</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\d</span>}{<span style="color:#66d9ef">\mathrm</span>{d}}</code></pre></div>
 </div>
 <p>Now you can simply use <code>\d</code> and it will print upright <code>d</code> as shown below.</p>
 <div class="src src-latex">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-latex" data-lang="latex"><span style="display:flex;"><span><span style="color:#e6db74">$</span> dx \ne \d x <span style="color:#e6db74">$</span></span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#e6db74">$</span> dx \ne \d x <span style="color:#e6db74">$</span></code></pre></div>
 </div>
 <p>RESULTS: $dx \ne \mathrm{d}x$</p>
 <p>

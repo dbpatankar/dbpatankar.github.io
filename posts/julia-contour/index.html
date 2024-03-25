@@ -19,7 +19,7 @@ MathJax = {
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
-<link rel="stylesheet" href="https://dbpatankar.github.io/css/mySite.css">
+<link rel="stylesheet" href="https://dbpatankar.github.io/css/myMod.css">
     <link href="https://gmpg.org/xfn/11" rel="profile">
     
     <link rel="canonical" href="https://dbpatankar.github.io/posts/julia-contour/">
@@ -28,7 +28,7 @@ MathJax = {
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.103.0" />
+<meta name="generator" content="Hugo 0.92.2" />
 
     
     
@@ -40,11 +40,11 @@ MathJax = {
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Julia: contour plots"/>
 <meta name="twitter:description" content="Plots library in julia is very powerful for plotting and I have rarely needed any other plotting library. However its documentation seems lacking in explaining its features, especially when you want to plot contours. So this page explains some of the common features of the function contour() which I need to use often.
-Data Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z)."/>
+Data  Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z)."/>
 
 <meta property="og:title" content="Julia: contour plots" />
 <meta property="og:description" content="Plots library in julia is very powerful for plotting and I have rarely needed any other plotting library. However its documentation seems lacking in explaining its features, especially when you want to plot contours. So this page explains some of the common features of the function contour() which I need to use often.
-Data Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z)." />
+Data  Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dbpatankar.github.io/posts/julia-contour/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-10-01T18:55:13+05:30" />
@@ -59,10 +59,10 @@ Data Lets consider a grid as shown in figure below. Each dot on the grid is a po
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.909f51576ca50f23157cff821fba194a7c7834207d28b9ad4ef6cc2cde54e94b.css" integrity="sha256-kJ9RV2ylDyMVfP&#43;CH7oZSnx4NCB9KLmtTvbMLN5U6Us=">
+<link rel="stylesheet" href="/scss/hyde-hyde.3cf38b10033a14a33ff2449e3f1e2a593a1e09e87e1f70fa632413e909a50f43.css" integrity="sha256-PPOLEAM6FKM/8kSePx4qWToeCeh&#43;H3D6YyQT6QmlD0M=">
 
 
-<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+<link rel="stylesheet" href="/scss/print.e5f87aa9d406c09ad1cb0284b65f42c7e53ea92dc1fe9b6ab366bba96a1344e9.css" integrity="sha256-5fh6qdQGwJrRywKEtl9Cx&#43;U&#43;qS3B/ptqs2a7qWoTROk=" media="print">
 
 
 
@@ -147,14 +147,6 @@ Data Lets consider a grid as shown in figure below. Each dot on the grid is a po
 					</a>
 				</li>
 			 
-		 
-			 
-				<li>
-					<a href="/publications">
-						<span>Publications</span>
-					</a>
-				</li>
-			 
 		
 	</ul>
 </div>
@@ -199,7 +191,7 @@ Data Lets consider a grid as shown in figure below. Each dot on the grid is a po
     </div>
     
 <div class="copyright">
-  &copy; 2023 Digvijay Patankar. All rights reserved.
+  &copy; 2024 Digvijay Patankar. All rights reserved.
   
 </div>
 
@@ -289,17 +281,17 @@ Grid with elevation at each point
 <p>
 Lets plot contours on this grid. Output from the code block is immediately after the code block.</p>
 <div class="src src-julia">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">7</span>
-</span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0.5</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>z <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">.+</span> [<span style="color:#ae81ff">102</span> <span style="color:#ae81ff">103</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">104</span> <span style="color:#ae81ff">96</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">102</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">104</span> <span style="color:#ae81ff">105</span> <span style="color:#ae81ff">103</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">103</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">98</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">103</span> <span style="color:#ae81ff">104</span> <span style="color:#ae81ff">97</span> <span style="color:#ae81ff">98</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">98</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">101</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">103</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">96</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">101</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">104</span> <span style="color:#ae81ff">98</span> <span style="color:#ae81ff">97</span> <span style="color:#ae81ff">95</span> <span style="color:#ae81ff">96</span>]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Now the plot</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Plots
-</span></span><span style="display:flex;"><span>contour(x, y, z)</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">7</span>
+y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0.5</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>
+z <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">.+</span> [<span style="color:#ae81ff">102</span> <span style="color:#ae81ff">103</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">104</span> <span style="color:#ae81ff">96</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">102</span>;
+  <span style="color:#ae81ff">104</span> <span style="color:#ae81ff">105</span> <span style="color:#ae81ff">103</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">103</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">98</span>;
+  <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">103</span> <span style="color:#ae81ff">104</span> <span style="color:#ae81ff">97</span> <span style="color:#ae81ff">98</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">98</span>;
+  <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">101</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">103</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">99</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">96</span>;
+  <span style="color:#ae81ff">101</span> <span style="color:#ae81ff">100</span> <span style="color:#ae81ff">102</span> <span style="color:#ae81ff">104</span> <span style="color:#ae81ff">98</span> <span style="color:#ae81ff">97</span> <span style="color:#ae81ff">95</span> <span style="color:#ae81ff">96</span>]
+
+<span style="color:#75715e"># Now the plot</span>
+<span style="color:#66d9ef">using</span> Plots
+contour(x, y, z)</code></pre></div>
 </div>
 <img src="/images/julia-contour/contour-2.png" alt="/images/julia-contour/contour-2.png" title="/images/julia-contour/contour-2.png" width="70%"/>
 </div>
@@ -311,13 +303,13 @@ Add custom levels
 <div id="outline-text-headline-2" class="outline-text-2">
 <p>You can specify limits on contours i.e. the lowest contour and highest contour using <code>clims</code>. Only contours within this range will be plotted. The intermediate contour levels will be decided by the library.</p>
 <div class="src src-julia">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>contour(x, y, z, clims<span style="color:#f92672">=</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">103</span>))</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">contour(x, y, z, clims<span style="color:#f92672">=</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">103</span>))</code></pre></div>
 </div>
 <img src="/images/julia-contour/contour-3.png" alt="/images/julia-contour/contour-3.png" title="/images/julia-contour/contour-3.png" width="70%"/>
 <p>
 However if you want to have specific levels to be plotted then use <code>levels</code> argument.</p>
 <div class="src src-julia">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>contour(x, y, z, levels<span style="color:#f92672">=</span>collect(<span style="color:#ae81ff">95</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">105</span>))</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">contour(x, y, z, levels<span style="color:#f92672">=</span>collect(<span style="color:#ae81ff">95</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">105</span>))</code></pre></div>
 </div>
 <img src="/images/julia-contour/contour-4.png" alt="/images/julia-contour/contour-4.png" title="/images/julia-contour/contour-4.png" width="70%"/>
 </div>
@@ -329,20 +321,20 @@ Labels on contours
 <div id="outline-text-headline-3" class="outline-text-2">
 <p>Labels on each contour can be added by simply using <code>contour_labels=true</code> in arguments.</p>
 <div class="src src-julia">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span>contour(x, y, z, levels<span style="color:#f92672">=</span>collect(<span style="color:#ae81ff">95</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">105</span>), contour_labels<span style="color:#f92672">=</span>true)</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">contour(x, y, z, levels<span style="color:#f92672">=</span>collect(<span style="color:#ae81ff">95</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">105</span>), contour_labels<span style="color:#f92672">=</span>true)</code></pre></div>
 </div>
 <p>
 <img src="/images/julia-contour/contour-5.png" alt="/images/julia-contour/contour-5.png" title="/images/julia-contour/contour-5.png" /></p>
 <p>
 But what if you want some custom label to your contours and not the values? In this particular case let&#39;s say you want the elevation with respect to level of $100$, i.e. a $101$ contour should have label $1$ and a $98$ contour should have label $-2$. This is currently not possible with default <code>gr()</code> backend. We need <code>PyPlot</code> library for this. In order to ensure that this library doesn&#39;t overwrite the functions from <code>Plots</code> library, we will import it and use its functions with qualifier.</p>
 <div class="src src-julia">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> PyPlot
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>levels <span style="color:#f92672">=</span> <span style="color:#ae81ff">95</span><span style="color:#f92672">:</span><span style="color:#ae81ff">105</span>
-</span></span><span style="display:flex;"><span>level_labels <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$</span>(i<span style="color:#f92672">-</span><span style="color:#ae81ff">100</span>)<span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> levels];
-</span></span><span style="display:flex;"><span>c1 <span style="color:#f92672">=</span> PyPlot<span style="color:#f92672">.</span>contour(x, y, z, levels<span style="color:#f92672">=</span>levels, contour_labels<span style="color:#f92672">=</span>true)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>PyPlot<span style="color:#f92672">.</span>clabel(c1, fmt<span style="color:#f92672">=</span><span style="color:#66d9ef">Dict</span>(zip(levels, level_labels)), inline<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#66d9ef">import</span> PyPlot
+
+levels <span style="color:#f92672">=</span> <span style="color:#ae81ff">95</span><span style="color:#f92672">:</span><span style="color:#ae81ff">105</span>
+level_labels <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$</span>(i<span style="color:#f92672">-</span><span style="color:#ae81ff">100</span>)<span style="color:#e6db74">&#34;</span> <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> levels];
+c1 <span style="color:#f92672">=</span> PyPlot<span style="color:#f92672">.</span>contour(x, y, z, levels<span style="color:#f92672">=</span>levels, contour_labels<span style="color:#f92672">=</span>true)
+
+PyPlot<span style="color:#f92672">.</span>clabel(c1, fmt<span style="color:#f92672">=</span><span style="color:#66d9ef">Dict</span>(zip(levels, level_labels)), inline<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>);</code></pre></div>
 </div>
 <p>
 <img src="/images/julia-contour/contour-6.png" alt="/images/julia-contour/contour-6.png" title="/images/julia-contour/contour-6.png" /></p>

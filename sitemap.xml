@@ -2,22 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dbpatankar.github.io/tags/config/</loc>
-    <lastmod>2022-12-28T03:41:50+05:30</lastmod>
+    <loc>https://dbpatankar.github.io/tags/bonds/</loc>
+    <lastmod>2024-03-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dbpatankar.github.io/</loc>
+    <lastmod>2024-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/tags/data-analysis/</loc>
+    <lastmod>2024-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/tags/data-science/</loc>
+    <lastmod>2024-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/tags/data-visualization/</loc>
+    <lastmod>2024-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/tags/election/</loc>
+    <lastmod>2024-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/posts/electoral-bonds/</loc>
+    <lastmod>2024-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/posts/</loc>
+    <lastmod>2024-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/tags/</loc>
+    <lastmod>2024-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dbpatankar.github.io/tags/config/</loc>
     <lastmod>2022-12-28T03:41:50+05:30</lastmod>
   </url><url>
     <loc>https://dbpatankar.github.io/tags/emacs/</loc>
     <lastmod>2022-12-28T03:41:50+05:30</lastmod>
   </url><url>
     <loc>https://dbpatankar.github.io/posts/my-custom-emacs-config/</loc>
-    <lastmod>2022-12-28T03:41:50+05:30</lastmod>
-  </url><url>
-    <loc>https://dbpatankar.github.io/posts/</loc>
-    <lastmod>2022-12-28T03:41:50+05:30</lastmod>
-  </url><url>
-    <loc>https://dbpatankar.github.io/tags/</loc>
     <lastmod>2022-12-28T03:41:50+05:30</lastmod>
   </url><url>
     <loc>https://dbpatankar.github.io/tags/latex/</loc>

@@ -19,7 +19,7 @@ MathJax = {
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
-<link rel="stylesheet" href="https://dbpatankar.github.io/css/mySite.css">
+<link rel="stylesheet" href="https://dbpatankar.github.io/css/myMod.css">
     <link href="https://gmpg.org/xfn/11" rel="profile">
     
     <link rel="canonical" href="https://dbpatankar.github.io/projects/">
@@ -28,7 +28,7 @@ MathJax = {
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.103.0" />
+<meta name="generator" content="Hugo 0.92.2" />
 
     
     
@@ -39,10 +39,10 @@ MathJax = {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Professional and personal projects"/>
-<meta name="twitter:description" content="Python programming Developer and maintainer of python package PEGMA: Package for Exploratory Ground Motion Analysis. This is a package with GUI for analyzing ground motions. The package does not simply find the characteristics of ground motions, but it can perform some exploratory analysis on it. Developer and maintainer of python package earthquakepy. The package is intended to assist seismologists and earthquake engineers in their day-to-day tasks. Developed a small GUI app to plot correlation between rainfall data (ascii) and temperature data (netCDF file), given season, year range etc."/>
+<meta name="twitter:description" content="earthquakepy  Motivation  This is an open source python library I am co-developing and maintaining. Being a researcher in Earthquake Engineering, I had to deal with many ground motion records on a daily basis. The records came from different sources and had different format. So, every time I had to use that data, I would write a small script. This resulted in having multiple scripts scattered on my HDD doing essentially the same work."/>
 
 <meta property="og:title" content="Professional and personal projects" />
-<meta property="og:description" content="Python programming Developer and maintainer of python package PEGMA: Package for Exploratory Ground Motion Analysis. This is a package with GUI for analyzing ground motions. The package does not simply find the characteristics of ground motions, but it can perform some exploratory analysis on it. Developer and maintainer of python package earthquakepy. The package is intended to assist seismologists and earthquake engineers in their day-to-day tasks. Developed a small GUI app to plot correlation between rainfall data (ascii) and temperature data (netCDF file), given season, year range etc." />
+<meta property="og:description" content="earthquakepy  Motivation  This is an open source python library I am co-developing and maintaining. Being a researcher in Earthquake Engineering, I had to deal with many ground motion records on a daily basis. The records came from different sources and had different format. So, every time I had to use that data, I would write a small script. This resulted in having multiple scripts scattered on my HDD doing essentially the same work." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dbpatankar.github.io/projects/" /><meta property="article:section" content="" />
 <meta property="article:published_time" content="2022-10-01T22:07:48+05:30" />
@@ -57,10 +57,10 @@ MathJax = {
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.909f51576ca50f23157cff821fba194a7c7834207d28b9ad4ef6cc2cde54e94b.css" integrity="sha256-kJ9RV2ylDyMVfP&#43;CH7oZSnx4NCB9KLmtTvbMLN5U6Us=">
+<link rel="stylesheet" href="/scss/hyde-hyde.3cf38b10033a14a33ff2449e3f1e2a593a1e09e87e1f70fa632413e909a50f43.css" integrity="sha256-PPOLEAM6FKM/8kSePx4qWToeCeh&#43;H3D6YyQT6QmlD0M=">
 
 
-<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+<link rel="stylesheet" href="/scss/print.e5f87aa9d406c09ad1cb0284b65f42c7e53ea92dc1fe9b6ab366bba96a1344e9.css" integrity="sha256-5fh6qdQGwJrRywKEtl9Cx&#43;U&#43;qS3B/ptqs2a7qWoTROk=" media="print">
 
 
 
@@ -145,14 +145,6 @@ MathJax = {
 					</a>
 				</li>
 			 
-		 
-			 
-				<li>
-					<a href="/publications">
-						<span>Publications</span>
-					</a>
-				</li>
-			 
 		
 	</ul>
 </div>
@@ -197,7 +189,7 @@ MathJax = {
     </div>
     
 <div class="copyright">
-  &copy; 2023 Digvijay Patankar. All rights reserved.
+  &copy; 2024 Digvijay Patankar. All rights reserved.
   
 </div>
 
@@ -240,11 +232,27 @@ MathJax = {
     <div class="toc-wrapper">
       <nav id="TableOfContents">
 <ul>
-<li><a href="#headline-1">Python programming</a>
+<li><a href="#headline-1">earthquakepy</a>
+<ul>
+<li><a href="#headline-2">Motivation</a>
 </li>
-<li><a href="#headline-2">Finite element analysis</a>
+<li><a href="#headline-3">What can it do?</a>
 </li>
-<li><a href="#headline-3">PhD thesis</a>
+<li><a href="#headline-4">Where to get it?</a>
+</li>
+<li><a href="#headline-5">Tech stack</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-6">PEGMA</a>
+<ul>
+<li><a href="#headline-7">Tech stack</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-8">PhD thesis</a>
+</li>
+<li><a href="#headline-9">Miscellaneous</a>
 </li>
 </ul>
 </nav>
@@ -256,37 +264,91 @@ MathJax = {
     
 <div id="outline-container-headline-1" class="outline-2">
 <h2 id="headline-1">
-Python programming
+earthquakepy
 </h2>
 <div id="outline-text-headline-1" class="outline-text-2">
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+Motivation
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p>This is an open source python library I am co-developing and maintaining. Being a researcher in Earthquake Engineering, I had to deal with many ground motion records on a daily basis. The records came from different sources and had different format. So, every time I had to use that data, I would write a small script. This resulted in having multiple scripts scattered on my HDD doing essentially the same work. Moreover, almost all scripts had different input and output formats making the scripts difficult to reuse. This was the initial motivation for me to write a Python package to accomplish all tasks. The package would ensure that the code is reusable and I need not write similar code again. <code>earthquakepy</code> is the resulting library.</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+What can it do?
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
 <ol>
-<li>Developer and maintainer of python package <a href="https://github.com/dbpatankar/pegma"><code>PEGMA: Package for Exploratory Ground Motion Analysis</code></a>. This is a package with GUI for analyzing ground motions. The package does not simply find the characteristics of ground motions, but it can perform some exploratory analysis on it.</li>
-<li>Developer and maintainer of python package <a href="https://github.com/gauthamrdy/earthquakepy"><code>earthquakepy</code></a>. The package is intended to assist seismologists and earthquake engineers in their day-to-day tasks.</li>
-<li>Developed a small GUI app to plot correlation between rainfall data (ascii) and temperature data (netCDF file), given season, year range etc. The plot is juxtaposed on world map. The project can be accessed on <a href="https://github.com/dbpatankar/rfSstCorrMap">github</a>.</li>
-<li>Multiple small projects/scripts for data analysis of <em>land-use survey</em> data, <em>FE analysis output</em> data etc.</li>
+<li>It can read ground motion data from <code>PEER-NGA</code> and <code>COSMOS</code> databases. It can also read data in raw text formats.</li>
+<li>Plot the ground motion data</li>
+<li>Calculate various ground motion characterics such as significant duration, arias intensity, peaks etc. and many more.</li>
+<li>Identify a few frequency domain characteristics such as predominant period, mean frequency, FFT, power spectrum etc.</li>
+<li>Calculate and plot the response spectra and tripartite plot.</li>
+<li>Some ground motion scaling and stretching (there is a plan to develope this further into a submodule for <em>ground motion selection and scaling</em>, as this is one of the most common tasks an earthquake engineer has to go through often).</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-Finite element analysis
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+Where to get it?
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<p>Head to it&#39;s GitHub repository <a href="https://github.com/gauthamrdy/earthquakepy">earthquakepy</a>. The repository contains information about installing it and a link to its documentation. The documentation is auto-generated and contains information of each and every function/module and class. Tutorials on it&#39;s usage are coming soon.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+Tech stack
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<p>numpy, scipy, matplotlib</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+PEGMA
 </h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<ol>
-<li>Modeling and analysis of building frames with friction damper and viscous damper using <code>code_aster</code> finite element analysis tool. The project was completed in collaboration with <a href="https://www.stantec.com/en/people/t/towfighi-saeed">Mr. Saeed Towfighi</a>, a Senior structural engineer from Canada.</li>
-</ol>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>It&#39;s an acronym for <code>Package for Exploratory Ground Motion Analysis</code>. This is in principle a GUI frontend to the <code>earthquakepy</code> library but it can do a bit more than what <code>earthquakepy</code> can. A few screenshots of the program are given below. You can find more about it on its GitHub repository <a href="https://github.com/dbpatankar/pegma">pegma</a>.</p>
+<figure>
+<img src="/images/pegma.png" alt="/images/pegma.png" title="/images/pegma.png" /><figcaption>
+PEGMA: Package for Exploratory Ground Motion Analysis - Some screenshots of the program
+</figcaption>
+</figure>
+<div id="outline-container-headline-7" class="outline-3">
+<h3 id="headline-7">
+Tech stack
+</h3>
+<div id="outline-text-headline-7" class="outline-text-3">
+<p>PySide6 (with Model-View architecture), matplotlib, numpy.</p>
 </div>
 </div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
+</div>
+</div>
+<div id="outline-container-headline-8" class="outline-2">
+<h2 id="headline-8">
 PhD thesis
 </h2>
-<div id="outline-text-headline-3" class="outline-text-2">
+<div id="outline-text-headline-8" class="outline-text-2">
 <ul>
 <li>Title: Design of friction dampers for seismic response reduction in framed buildings.</li>
 <li>During an event of earthquake, buildings vibrate due to energy supplied by the earthquake. Supplemental dampers like friction dampers can be used to dissipate part of that energy so that the building has lesser input energy for vibration.</li>
 <li>My work provides an easy and effective method of design of friction damper for a given building at a given location.</li>
 </ul>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-2">
+<h2 id="headline-9">
+Miscellaneous
+</h2>
+<div id="outline-text-headline-9" class="outline-text-2">
+<ol>
+<li>Multiple small projects/scripts for data analysis of <em>land-use survey</em> data, <em>FE analysis output</em> data etc. Some of which are available on my GitHub <a href="https://github.com/dbpatankar">dbpatankar</a>.</li>
+</ol>
 </div>
 </div>
 

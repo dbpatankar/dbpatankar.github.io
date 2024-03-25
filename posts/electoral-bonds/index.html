@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+<script>
+MathJax = {
+    tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        tags: 'ams',
+    },
+    chtml: {
+        scale: 1.0,
+    }
+};
+</script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<link rel="stylesheet" href="https://dbpatankar.github.io/css/myMod.css">
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    
+    <link rel="canonical" href="https://dbpatankar.github.io/posts/electoral-bonds/">
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.92.2" />
+
+    
+    
+    
+
+<title>My name is Bond, Electoral Bond. • D-V-J</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="My name is Bond, Electoral Bond."/>
+<meta name="twitter:description" content="The honourable Supreme Court of India had ordered the State Bank of India (SBI) to provide all the details of electoral bonds to the Election Commission of India (ECI), who was then required to make it public. After initial hesitation, SBI finally provided all the details and ECI has published those details on their website. Out of curiosity, I downloaded the data and visualized it. This post is just a part of that visualization."/>
+
+<meta property="og:title" content="My name is Bond, Electoral Bond." />
+<meta property="og:description" content="The honourable Supreme Court of India had ordered the State Bank of India (SBI) to provide all the details of electoral bonds to the Election Commission of India (ECI), who was then required to make it public. After initial hesitation, SBI finally provided all the details and ECI has published those details on their website. Out of curiosity, I downloaded the data and visualized it. This post is just a part of that visualization." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dbpatankar.github.io/posts/electoral-bonds/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-03-22T00:00:00+00:00" />
+
+
+
+    
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.3cf38b10033a14a33ff2449e3f1e2a593a1e09e87e1f70fa632413e909a50f43.css" integrity="sha256-PPOLEAM6FKM/8kSePx4qWToeCeh&#43;H3D6YyQT6QmlD0M=">
+
+
+<link rel="stylesheet" href="/scss/print.e5f87aa9d406c09ad1cb0284b65f42c7e53ea92dc1fe9b6ab366bba96a1344e9.css" integrity="sha256-5fh6qdQGwJrRywKEtl9Cx&#43;U&#43;qS3B/ptqs2a7qWoTROk=" media="print">
+
+
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://dbpatankar.github.io/">
+        
+          D-V-J
+        
+        </a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="https://dbpatankar.github.io/images/newDP1.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+         A civilized programmer 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">D-V-J</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Home</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/projects">
+						<span>Projects</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Posts</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/about">
+						<span>About Me</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a target="_blank" href="https://twitter.com/dbpatankar" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	<a target="_blank" href="https://github.com/dbpatankar" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a target="_blank" href="https://bitbucket.org/dbpatankar" rel="me"><i class="fab fa-bitbucket fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	<a target="_blank" href="https://linkedin.com/in/digvijay-patankar-1b191518" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a target="_blank" href="https://youtube.com/dbpatankar" rel="me"><i class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+<div class="copyright">
+  &copy; 2024 Digvijay Patankar. All rights reserved.
+  
+</div>
+
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>My name is Bond, Electoral Bond.</h1>
+    
+    
+<div class="post__meta">
+    
+    
+    <i class="fas fa-user-edit"></i> Digvijay Patankar
+    
+    </br>
+    
+    
+      <i class="fas fa-calendar-alt"></i> Mar 22, 2024
+    
+    
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="/tags/data-science">data-science</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/data-analysis">data-analysis</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/data-visualization">data-visualization</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/election">election</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/bonds">bonds</a>
+          
+      
+    
+    
+    <br/>
+    
+</div>
+
+
+  </header>
+  
+  
+  
+    <div class="toc-wrapper">
+      <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">Disclaimer</a>
+</li>
+<li><a href="#headline-2">Examine the data</a>
+<ul>
+<li><a href="#headline-3">Receivers i.e. political parties data</a>
+</li>
+<li><a href="#headline-4">Donors </a>
+</li>
+<li><a href="#headline-5">Clean merged data</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-6">Number analysis</a>
+</li>
+<li><a href="#headline-7">Top donors</a>
+<ul>
+<li><a href="#headline-8">Donation pattern over time</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-9">Top receivers</a>
+<ul>
+<li><a href="#headline-10">Range of donations for each party</a>
+</li>
+<li><a href="#headline-11">Top donors per party</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-12">Epilogue</a>
+</li>
+</ul>
+</nav>
+      
+    </div>
+  
+  
+  <div class="post">
+    
+<p>
+The honourable Supreme Court of India had ordered the State Bank of India (SBI) to provide all the details of electoral bonds to the Election Commission of India (ECI), who was then required to make it public.
+After initial hesitation, SBI finally provided all the details and ECI has published those details on their website.
+Out of curiosity, I downloaded the data and visualized it.
+This post is just a part of that visualization.</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+Disclaimer
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Before we proceed, following points must be kept in mind while reading.</p>
+<ol>
+<li>The data is downloaded from ECI website. It was in a PDF file and I have used &#34;online PDF to EXCEL&#34; conversion tool provided by Adobe Inc. Though, I have reviewed a few random rows to check the conversion accuracy, it is not guaranteed for the whole data. I make no claim on the correctness of the processed data.</li>
+<li>The visualization is done using Python with the help of common data science related libraries like Pandas, numpy, matplotlib etc.</li>
+<li>The whole exercise is basically a data analysis and visualization focused. Commentary is intentionally brief and avoids interpretation within political domain. By visiting my blog you have already proved that you are wise ;), so read it and have your own interpretations.</li>
+</ol>
+<p>Now, let&#39;s get started.</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+Examine the data
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+Receivers i.e. political parties data
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+receivers <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;receiver.csv&#34;</span>)
+donors <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;donor.csv&#34;</span>)
+receivers<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">3</span>)</code></pre></div>
+</div>
+<pre class="example">
+  Sr No. Date of\nEncashment               Name of the Political Party  ... Denominations Pay Branch\nCode Pay Teller
+0      1         12/Apr/2019  ALL INDIA ANNA DRAVIDA MUNNETRA KAZHAGAM  ...   1,00,00,000            00800    2770121
+1      2         12/Apr/2019  ALL INDIA ANNA DRAVIDA MUNNETRA KAZHAGAM  ...   1,00,00,000            00800    2770121
+2      3         12/Apr/2019  ALL INDIA ANNA DRAVIDA MUNNETRA KAZHAGAM  ...   1,00,00,000            00800    2770121
+
+[3 rows x 9 columns]
+</pre>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+Donors 
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">donors<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">3</span>)</code></pre></div>
+</div>
+<pre class="example">
+  Sr No.      Reference No  (URN) Journal Date Date of\nPurchase Date of Expiry  ... Bond\nNumber Denominations Issue Branch Code Issue Teller Status
+0      1  00001201904120000001166  12/Apr/2019       12/Apr/2019    26/Apr/2019  ...        11448     10,00,000             00001      5899230   Paid
+1      2  00001201904120000001166  12/Apr/2019       12/Apr/2019    26/Apr/2019  ...        11447     10,00,000             00001      5899230   Paid
+2      3  00001201904120000001166  12/Apr/2019       12/Apr/2019    26/Apr/2019  ...        11441     10,00,000             00001      5899230   Paid
+
+[3 rows x 12 columns]
+</pre>
+<p>
+The receivers dataframe contains the information about the bonds encashed by political parties whereas donors dataframe contains the donors who purchased the electoral bonds. Following cleaning is required on the data</p>
+<ol>
+<li>The column headers need to be changed so as to make it easy to handle in the code.</li>
+<li>There are some columns which are of no interest to us and hence can be deleted.</li>
+<li>Data in columns is not in appropriate format, for ex: &#34;Date of Expiry&#34; is a <code>string</code> in the dataframe, but we need it to be <code>date</code> formatted for using it as a timeseries.</li>
+<li>Political party names are written in full. We need to shorten them.</li>
+<li>Merge both dataframes based on bond numbers.</li>
+<li>Some more cleaning of data is also required.</li>
+</ol>
+<p>So let&#39;s just do all that and see some more details about the data.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">receivers<span style="color:#f92672">.</span>drop(receivers[receivers[<span style="color:#e6db74">&#34;Sr No.&#34;</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;Sr No.&#34;</span>]<span style="color:#f92672">.</span>index, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+donors<span style="color:#f92672">.</span>drop(donors[donors[<span style="color:#e6db74">&#34;Sr No.&#34;</span>]<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;Sr No.&#34;</span>]<span style="color:#f92672">.</span>index, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+receivers<span style="color:#f92672">.</span>drop([<span style="color:#e6db74">&#34;Sr No.&#34;</span>, <span style="color:#e6db74">&#34;Pay Teller&#34;</span>, <span style="color:#e6db74">&#34;Pay Branch</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Code&#34;</span>], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+donors<span style="color:#f92672">.</span>drop([<span style="color:#e6db74">&#34;Sr No.&#34;</span>, <span style="color:#e6db74">&#34;Issue Branch Code&#34;</span>, <span style="color:#e6db74">&#34;Issue Teller&#34;</span>, <span style="color:#e6db74">&#34;Reference No  (URN)&#34;</span>], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+
+receivers<span style="color:#f92672">.</span>rename(columns<span style="color:#f92672">=</span>{
+    <span style="color:#e6db74">&#34;Date of</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Encashment&#34;</span>: <span style="color:#e6db74">&#34;encash_date&#34;</span>,
+    <span style="color:#e6db74">&#34;Name of the Political Party&#34;</span>: <span style="color:#e6db74">&#34;pol_party&#34;</span>,
+    <span style="color:#e6db74">&#34;Account no. of</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Political Party&#34;</span>: <span style="color:#e6db74">&#34;party_acc_no&#34;</span>,
+    <span style="color:#e6db74">&#34;Prefix&#34;</span>: <span style="color:#e6db74">&#34;prefix&#34;</span>,
+    <span style="color:#e6db74">&#34;Bond</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Number&#34;</span>: <span style="color:#e6db74">&#34;bond_num&#34;</span>,
+    <span style="color:#e6db74">&#34;Denominations&#34;</span>: <span style="color:#e6db74">&#34;denominations&#34;</span>,
+    <span style="color:#e6db74">&#34;Pay Branch</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Code&#34;</span>: <span style="color:#e6db74">&#34;branch_code&#34;</span>,
+    <span style="color:#e6db74">&#34;Pay Teller&#34;</span>: <span style="color:#e6db74">&#34;pay_teller&#34;</span>
+}, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+donors<span style="color:#f92672">.</span>rename(columns<span style="color:#f92672">=</span>{
+    <span style="color:#e6db74">&#34;Reference No  (URN)&#34;</span>: <span style="color:#e6db74">&#34;urn&#34;</span>,
+    <span style="color:#e6db74">&#34;Journal Date&#34;</span>: <span style="color:#e6db74">&#34;journal_date&#34;</span>,
+    <span style="color:#e6db74">&#34;Date of</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Purchase&#34;</span>: <span style="color:#e6db74">&#34;purchase_date&#34;</span>,
+    <span style="color:#e6db74">&#34;Date of Expiry&#34;</span>: <span style="color:#e6db74">&#34;expiry_date&#34;</span>,
+    <span style="color:#e6db74">&#34;Name of the Purchaser&#34;</span>: <span style="color:#e6db74">&#34;purchaser&#34;</span>,
+    <span style="color:#e6db74">&#34;Prefix&#34;</span>: <span style="color:#e6db74">&#34;prefix&#34;</span>,
+    <span style="color:#e6db74">&#34;Bond</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Number&#34;</span>: <span style="color:#e6db74">&#34;bond_num&#34;</span>,
+    <span style="color:#e6db74">&#34;Denominations&#34;</span>: <span style="color:#e6db74">&#34;denominations&#34;</span>,
+    <span style="color:#e6db74">&#34;Issue Branch Code&#34;</span>: <span style="color:#e6db74">&#34;issue_branch&#34;</span>,
+    <span style="color:#e6db74">&#34;Issue Teller&#34;</span>: <span style="color:#e6db74">&#34;issue_teller&#34;</span>,
+    <span style="color:#e6db74">&#34;Status&#34;</span>: <span style="color:#e6db74">&#34;status&#34;</span>
+}, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)</code></pre></div>
+</div>
+<p>
+Now, let&#39;s look at the status of all bonds.
+There are total 18871 bonds in the <code>donors</code> dataframe, of which 18741 bonds were paid while 130 expired.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">donors[<span style="color:#e6db74">&#34;status&#34;</span>]<span style="color:#f92672">.</span>value_counts()</code></pre></div>
+</div>
+<pre class="example">
+status
+Paid       18741
+Expired      130
+Name: count, dtype: int64
+</pre>
+<p>
+Let&#39; replace the party names with their short names.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">parties <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">&#34;ALL INDIA ANNA DRAVIDA MUNNETRA KAZHAGAM&#34;</span> : <span style="color:#e6db74">&#34;AIADMK&#34;</span>,
+    <span style="color:#e6db74">&#34;AAM AADMI PARTY&#34;</span>: <span style="color:#e6db74">&#34;AAP&#34;</span>,
+    <span style="color:#e6db74">&#34;ADYAKSHA SAMAJVADI PARTY&#34;</span>: <span style="color:#e6db74">&#34;ASP&#34;</span>,
+    <span style="color:#e6db74">&#34;ALL INDIA TRINAMOOL CONGRESS&#34;</span>: <span style="color:#e6db74">&#34;TMC&#34;</span>,
+    <span style="color:#e6db74">&#34;BHARAT RASHTRA SAMITHI&#34;</span>: <span style="color:#e6db74">&#34;BRS&#34;</span>,
+    <span style="color:#e6db74">&#34;BHARATIYA JANATA PARTY&#34;</span>: <span style="color:#e6db74">&#34;BJP&#34;</span>,
+    <span style="color:#e6db74">&#34;BIHAR PRADESH JANTA DAL(UNITED)&#34;</span>: <span style="color:#e6db74">&#34;JD(U)&#34;</span>,
+    <span style="color:#e6db74">&#34;BIJU JANATA DAL&#34;</span>: <span style="color:#e6db74">&#34;BIJU JD&#34;</span>,
+    <span style="color:#e6db74">&#34;DRAVIDA MUNNETRA KAZHAGAM (DMK)&#34;</span>: <span style="color:#e6db74">&#34;DMK&#34;</span>,
+    <span style="color:#e6db74">&#34;GOA FORWARD PARTY&#34;</span>: <span style="color:#e6db74">&#34;GFP&#34;</span>,
+    <span style="color:#e6db74">&#34;JAMMU AND KASHMIR NATIONAL CONFERENCE&#34;</span>: <span style="color:#e6db74">&#34;NC&#34;</span>,
+    <span style="color:#e6db74">&#34;JANASENA PARTY&#34;</span>: <span style="color:#e6db74">&#34;JANASENA&#34;</span>,
+    <span style="color:#e6db74">&#34;JANATA DAL ( SECULAR )&#34;</span>: <span style="color:#e6db74">&#34;JDS&#34;</span>,
+    <span style="color:#e6db74">&#34;JHARKHAND MUKTI MORCHA&#34;</span>: <span style="color:#e6db74">&#34;JMM&#34;</span>,
+    <span style="color:#e6db74">&#34;MAHARASHTRAWADI GOMNTAK PARTY&#34;</span>: <span style="color:#e6db74">&#34;GOMANTAK&#34;</span>,
+    <span style="color:#e6db74">&#34;NATIONALIST CONGRESS PARTY MAHARASHTRA PRADESH&#34;</span>: <span style="color:#e6db74">&#34;NCC&#34;</span>,
+    <span style="color:#e6db74">&#34;PRESIDENT, ALL INDIA CONGRESS COMMITTEE&#34;</span>: <span style="color:#e6db74">&#34;INC&#34;</span>,
+    <span style="color:#e6db74">&#34;RASHTRIYA JANTA DAL&#34;</span>: <span style="color:#e6db74">&#34;RJD&#34;</span>, 
+    <span style="color:#e6db74">&#34;SHIROMANI AKALI DAL&#34;</span>: <span style="color:#e6db74">&#34;SAD&#34;</span>,
+    <span style="color:#e6db74">&#34;SHIVSENA&#34;</span>: <span style="color:#e6db74">&#34;SHIVSENA&#34;</span>,
+    <span style="color:#e6db74">&#34;SIKKIM DEMOCRATIC FRONT&#34;</span>: <span style="color:#e6db74">&#34;SDF&#34;</span>,
+    <span style="color:#e6db74">&#34;SIKKIM KRANTIKARI MORCHA&#34;</span>: <span style="color:#e6db74">&#34;SKM&#34;</span>,
+    <span style="color:#e6db74">&#34;TELUGU DESAM PARTY&#34;</span>: <span style="color:#e6db74">&#34;TDP&#34;</span>,
+    <span style="color:#e6db74">&#34;YSR  CONGRESS PARTY  (YUVAJANA SRAMIKA RYTHU CONGRESS PARTY)&#34;</span>: <span style="color:#e6db74">&#34;YSRCONG&#34;</span>,
+}
+
+receivers <span style="color:#f92672">=</span> receivers<span style="color:#f92672">.</span>replace({
+    <span style="color:#e6db74">&#34;pol_party&#34;</span>: parties,
+})</code></pre></div>
+</div>
+<p>
+Also, let&#39;s replace some company names to their short names.
+Moreover, many company names had minor spelling mistakes in different records.
+So, there is a need to correct them.
+Some company names are replaced with their group, for ex multiple Bajaj companies are clubbed together in &#34;BAJAJ COMPANIES&#34;.
+I may not have done the clubbing exercise with utmost precision.
+However, that is unlikely to cause any significant issue with the oerall analysis. </p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">companies <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^AASHMAN&#34;</span>: <span style="color:#e6db74">&#34;AASHMAN ENERGY&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^ACHINTYA&#34;</span>: <span style="color:#e6db74">&#34;ACHINTYA SOLAR&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^APCO&#34;</span>: <span style="color:#e6db74">&#34;APCO INFRA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^ARVIND\b&#34;</span>: <span style="color:#e6db74">&#34;ARVIND LTD&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^ASKUS&#34;</span>: <span style="color:#e6db74">&#34;ASKUS LOGISTICS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^AUROBINDO&#34;</span>: <span style="color:#e6db74">&#34;AURO PHARMA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^AVEES&#34;</span>: <span style="color:#e6db74">&#34;AVEES TRADING&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^BAJAJ&#34;</span>: <span style="color:#e6db74">&#34;BAJAJ COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^BALU IRON&#34;</span>: <span style="color:#e6db74">&#34;BALU IRON&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^BANSAL&#34;</span>: <span style="color:#e6db74">&#34;BANSAL&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^BESSEGGEN&#34;</span>: <span style="color:#e6db74">&#34;BESSEGGEN INFOTECH&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^BHARTI&#34;</span>: <span style="color:#e6db74">&#34;BHARTI AIRTEL&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^BIRLA&#34;</span>: <span style="color:#e6db74">&#34;BIRLA COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^CIPLA&#34;</span>: <span style="color:#e6db74">&#34;CIPLA LTD&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^COMFORT&#34;</span>: <span style="color:#e6db74">&#34;COMFORT TRIMS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^CROCHET&#34;</span>: <span style="color:#e6db74">&#34;CROCHET TRADE&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^D S ENGINEERING&#34;</span>: <span style="color:#e6db74">&#34;D S ENGG&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^DASAMI&#34;</span>: <span style="color:#e6db74">&#34;DASAMI LAB&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^DCM&#34;</span>: <span style="color:#e6db74">&#34;DCM SHRIRAM LTD&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^DERIVE&#34;</span>: <span style="color:#e6db74">&#34;DERIVE TRADING&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^DIVYASREE&#34;</span>: <span style="color:#e6db74">&#34;DIVYASREE&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^DIVYESH&#34;</span>: <span style="color:#e6db74">&#34;DIVYESH POWER&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^DLF&#34;</span>: <span style="color:#e6db74">&#34;DLF&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^DR&#34;</span>: <span style="color:#e6db74">&#34;DR REDDY LAB&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^ELENA&#34;</span>: <span style="color:#e6db74">&#34;ELENA RENEWABLE&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^FUTURE&#34;</span>: <span style="color:#e6db74">&#34;FUTURE GAMING&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^GENUS&#34;</span>: <span style="color:#e6db74">&#34;GENUS POWER&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^GOODLUCK&#34;</span>: <span style="color:#e6db74">&#34;GOODLUCK INDIA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^GREENKO&#34;</span>: <span style="color:#e6db74">&#34;GREENKO COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^HETERO&#34;</span>: <span style="color:#e6db74">&#34;HETERO BIO COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^HINDYS&#34;</span>: <span style="color:#e6db74">&#34;HINDYS LAB&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^HONOUR&#34;</span>: <span style="color:#e6db74">&#34;HONOUR LAB&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^IDEAL&#34;</span>: <span style="color:#e6db74">&#34;IDEAL REAL ESTATE&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^INFOTEL&#34;</span>: <span style="color:#e6db74">&#34;INFOTEL TECHNOLOGIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^INORBIT&#34;</span>: <span style="color:#e6db74">&#34;INORBIT MALLS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^INOX&#34;</span>: <span style="color:#e6db74">&#34;INOX&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^INTERGLOBE&#34;</span>: <span style="color:#e6db74">&#34;INDIGO&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^J K CEMENT&#34;</span>: <span style="color:#e6db74">&#34;J K CEMENT&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^JINDAL&#34;</span>: <span style="color:#e6db74">&#34;JINDAL COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^KITEX&#34;</span>: <span style="color:#e6db74">&#34;KITEX GARMENTS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^LAXMI INDUSTRIAL&#34;</span>: <span style="color:#e6db74">&#34;LAXMI BOTTLING&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^MEGHA&#34;</span>: <span style="color:#e6db74">&#34;MEGHA ENGG&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^MICRO&#34;</span>: <span style="color:#e6db74">&#34;MICRO LABS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^MKJ&#34;</span>: <span style="color:#e6db74">&#34;MKJ ENTERPRISES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^MKK&#34;</span>: <span style="color:#e6db74">&#34;MKK METAL&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^MODERN&#34;</span>: <span style="color:#e6db74">&#34;MODERN ROAD MAKERS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^MOHIT&#34;</span>: <span style="color:#e6db74">&#34;MOHIT MINERALS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^MSN&#34;</span>: <span style="color:#e6db74">&#34;MSN COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^MY HOME&#34;</span>: <span style="color:#e6db74">&#34;MY HOME INFRA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^MYTRAH&#34;</span>: <span style="color:#e6db74">&#34;MYTRAH ENERGY&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^NATCO&#34;</span>: <span style="color:#e6db74">&#34;NATCO PHARMA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^NAVAYUGA&#34;</span>: <span style="color:#e6db74">&#34;NAVAYUGA ENGG&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^NSL&#34;</span>: <span style="color:#e6db74">&#34;NSL COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^NUVOCO&#34;</span>: <span style="color:#e6db74">&#34;NUVOCO&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^ORISSA&#34;</span>: <span style="color:#e6db74">&#34;ORISSA METALIKS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^PALM&#34;</span>: <span style="color:#e6db74">&#34;PALM ESTATE&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^PENGUIN&#34;</span>: <span style="color:#e6db74">&#34;PENGUIN TRADING&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^PHIL&#34;</span>: <span style="color:#e6db74">&#34;PHILIPS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^PIRAMAL&#34;</span>: <span style="color:#e6db74">&#34;PIRAMAL COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^PRESTIGE&#34;</span>: <span style="color:#e6db74">&#34;PRESTIGE COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^PROCURE&#34;</span>: <span style="color:#e6db74">&#34;PROCURE ADVISORY&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^QWIK&#34;</span>: <span style="color:#e6db74">&#34;QWIK SUPPLY&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^R.S.&#34;</span>: <span style="color:#e6db74">&#34;R.S.BROTHERS RETAIL&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^RIPLEY&#34;</span>: <span style="color:#e6db74">&#34;RIPLEY&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^ROSHNI&#34;</span>: <span style="color:#e6db74">&#34;ROSHNI&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SEI&#34;</span>: <span style="color:#e6db74">&#34;SEI COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SELMAR&#34;</span>: <span style="color:#e6db74">&#34;SELMAR LAB&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SENGUPTA&#34;</span>: <span style="color:#e6db74">&#34;SENGUPTA PVT LTD&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SHREE CEMENT&#34;</span>: <span style="color:#e6db74">&#34;SHREE CEMENT&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SHREYAS&#34;</span>: <span style="color:#e6db74">&#34;SHREYAS RENEWABLE&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SILVERTONE&#34;</span>: <span style="color:#e6db74">&#34;SILVERTONE SECURITIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SKEIRON&#34;</span>: <span style="color:#e6db74">&#34;SKEIRON RENEWABLE&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SOM DIST&#34;</span>: <span style="color:#e6db74">&#34;SOM DISTILLERIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SPECO&#34;</span>: <span style="color:#e6db74">&#34;SPECO INFRA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SUN PHARMA&#34;</span>: <span style="color:#e6db74">&#34;SUN PHARMA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^THRIVENI&#34;</span>: <span style="color:#e6db74">&#34;THRIVENI COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^TORRENT\s*POWER&#34;</span>: <span style="color:#e6db74">&#34;TORRENT POWER&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^TORRENT\s*PHARMA&#34;</span>: <span style="color:#e6db74">&#34;TORRENT PHARMA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^TRANSWAYS&#34;</span>: <span style="color:#e6db74">&#34;TRANSWAYS EXIM&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^TRIDENT\b&#34;</span>: <span style="color:#e6db74">&#34;TRIDENT LTD&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^TVS&#34;</span>: <span style="color:#e6db74">&#34;TVS COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^ULTRA&#34;</span>: <span style="color:#e6db74">&#34;ULTRATECH CEMENTS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^UTKAL&#34;</span>: <span style="color:#e6db74">&#34;UTKAL ALUMINA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^V M SALGAOCAR&#34;</span>: <span style="color:#e6db74">&#34;V M SALGAOCAR COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^VAMSIRAM\b&#34;</span>: <span style="color:#e6db74">&#34;VAMSIRAM BUILDERs COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^VARDHMAN&#34;</span>: <span style="color:#e6db74">&#34;VARDHMAN TEXTILES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^VEDANTA&#34;</span>: <span style="color:#e6db74">&#34;VEDANTA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^WELSPUN&#34;</span>: <span style="color:#e6db74">&#34;WELSPUN COMPANIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^ZUVAN&#34;</span>: <span style="color:#e6db74">&#34;ZUVAN ENERGY&#34;</span>,
+}
+
+<span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> companies<span style="color:#f92672">.</span>items():
+    donors<span style="color:#f92672">.</span>loc[donors[<span style="color:#e6db74">&#34;purchaser&#34;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>contains(k), <span style="color:#e6db74">&#34;purchaser&#34;</span>] <span style="color:#f92672">=</span> v</code></pre></div>
+</div>
+<p>
+Let&#39;s merge the <code>donors</code> and <code>receivers</code> dataframes into one single dataframe based on unique alphanumeric bond numbers.
+In the datasets, the bond number is split into two parts, <code>prefix</code> and <code>bond_num</code>.
+As both the dataframes contain column named <code>denominations</code>, the merged dataset will have two columns named <code>denominations_x</code> and <code>denominations_y</code>. 
+The <code>denominations_x/y</code> columns are having amount donated but in string format.
+We need to change them to numbers.
+And some other columns to datetime format.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">donors <span style="color:#f92672">=</span> donors<span style="color:#f92672">.</span>astype({<span style="color:#e6db74">&#34;bond_num&#34;</span>: <span style="color:#e6db74">&#34;int32&#34;</span>})
+receivers <span style="color:#f92672">=</span> receivers<span style="color:#f92672">.</span>astype({<span style="color:#e6db74">&#34;bond_num&#34;</span>: <span style="color:#e6db74">&#34;int32&#34;</span>})
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>merge(donors, receivers, on<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;bond_num&#34;</span>, <span style="color:#e6db74">&#34;prefix&#34;</span>], how<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;outer&#34;</span>)
+<span style="color:#66d9ef">for</span> col <span style="color:#f92672">in</span> df:
+    <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;date&#34;</span> <span style="color:#f92672">in</span> col:
+        df[col] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(df[col], errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;coerce&#34;</span>)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">str2num</span>(x):
+    <span style="color:#66d9ef">try</span>:
+        v <span style="color:#f92672">=</span> int(x<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;,&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>))
+    <span style="color:#66d9ef">except</span>:
+        v <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>nan
+    <span style="color:#66d9ef">return</span> v
+df[<span style="color:#e6db74">&#34;denominations&#34;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#34;denominations_y&#34;</span>]<span style="color:#f92672">.</span>apply(str2num)</code></pre></div>
+</div>
+<p>Now we have clean merged data ready to analyze.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+Clean merged data
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<p>Let&#39;s have a look at the data.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">3</span>)</code></pre></div>
+</div>
+<pre class="example">
+  journal_date purchase_date expiry_date      purchaser prefix  bond_num  ...   status encash_date pol_party party_acc_no denominations_y denominations
+0   2021-04-07    2021-04-07  2021-04-21  N RAMAMOORTHY     OT         8  ...  Expired         NaT       NaN          NaN             NaN           NaN
+1   2023-07-10    2023-07-10  2023-07-24      ARAVIND S     OT        10  ...     Paid  2023-07-24       BJP  *******8244           1,000        1000.0
+2          NaT           NaT         NaT            NaN     TL        75  ...      NaN  2019-04-16       BJP  *******8244       10,00,000     1000000.0
+
+[3 rows x 13 columns]
+</pre>
+<p>
+There are still many company names which are too long and will affect out plot styling.
+So let&#39;s shorten some important company names. </p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">shortnames <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^HALDIA&#34;</span>: <span style="color:#e6db74">&#34;HALDIA ENERGY&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^ESSEL MINING&#34;</span>: <span style="color:#e6db74">&#34;ESSEL MINING&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^WESTERN UP&#34;</span>: <span style="color:#e6db74">&#34;WESTERN UP POWER&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^KEVENTER&#34;</span>: <span style="color:#e6db74">&#34;KEVENTER FOODPARK&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^QWIK&#34;</span>: <span style="color:#e6db74">&#34;QWIK SUPPLY&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^DHARIWAL&#34;</span>: <span style="color:#e6db74">&#34;DHARIWAL INFRA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^IFB&#34;</span>: <span style="color:#e6db74">&#34;IFB&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^CHENNAI GREEN&#34;</span>: <span style="color:#e6db74">&#34;CHENNAI GREEN&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^PRARAMBH SEC&#34;</span>: <span style="color:#e6db74">&#34;PRARAMBH SECURITIES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^YASHODA &#34;</span>: <span style="color:#e6db74">&#34;YASHODA HOSPITAL&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SASMAL&#34;</span>: <span style="color:#e6db74">&#34;SASMAL INFRA&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SEPC POWER&#34;</span>: <span style="color:#e6db74">&#34;SEPC POWER&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^RITHWIK&#34;</span>: <span style="color:#e6db74">&#34;RITHWIK PROJECTS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^INFINA FINANCE&#34;</span>: <span style="color:#e6db74">&#34;INFINA FINANCE&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^UNITED PHOS&#34;</span>: <span style="color:#e6db74">&#34;UNITED PHOS&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^SRI SIDDHARTH&#34;</span>: <span style="color:#e6db74">&#34;SIDDHARTH INFRATECH&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^WESTWELL GASES&#34;</span>: <span style="color:#e6db74">&#34;WESTWELL GASES&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^HIMALAYAN ENDEA&#34;</span>: <span style="color:#e6db74">&#34;HIMALAYAN ENDEAVOUR&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^IRB MP&#34;</span>: <span style="color:#e6db74">&#34;IRB MP EXPRESSWAY&#34;</span>,
+    <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^B G SHIRKE&#34;</span>: <span style="color:#e6db74">&#34;B G SHIRKE&#34;</span>,
+}
+
+<span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> shortnames<span style="color:#f92672">.</span>items():
+    df<span style="color:#f92672">.</span>loc[df[<span style="color:#e6db74">&#34;purchaser&#34;</span>]<span style="color:#f92672">.</span>str<span style="color:#f92672">.</span>contains(k, na<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>), <span style="color:#e6db74">&#34;purchaser&#34;</span>] <span style="color:#f92672">=</span> v</code></pre></div>
+</div>
+<p>
+Now we have the necessary cleaned data in our dataframe <code>df</code>. Let&#39;s use <code>describe()</code> method on a few useful columns. </p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df[[<span style="color:#e6db74">&#34;purchase_date&#34;</span>,<span style="color:#e6db74">&#34;purchaser&#34;</span>,<span style="color:#e6db74">&#34;pol_party&#34;</span>,<span style="color:#e6db74">&#34;denominations&#34;</span>]]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;object&#34;</span>)<span style="color:#f92672">.</span>describe()</code></pre></div>
+</div>
+<pre class="example">
+              purchase_date      purchaser pol_party  denominations
+count                 18871          18871     20421        20421.0
+unique                  146           1173        24            5.0
+top     2022-01-05 00:00:00  FUTURE GAMING       BJP     10000000.0
+freq                    570           1368      8633        12207.0
+</pre>
+<p>
+This part shows that there are total 18871 bond numbers in &#34;donor&#34; dataframe but 20421 in &#34;receiver&#34; dataframe.
+I am not sure for the reason for this.
+The difference of number of bonds is 1550.
+Let&#39;s examine which are these <em>missing</em> bond numbers, their total value and who encashed them.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">receivers[<span style="color:#e6db74">&#34;ubn&#34;</span>] <span style="color:#f92672">=</span> receivers[[<span style="color:#e6db74">&#34;prefix&#34;</span>, <span style="color:#e6db74">&#34;bond_num&#34;</span>]]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(x<span style="color:#f92672">.</span>values<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;str&#34;</span>)), axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+donors[<span style="color:#e6db74">&#34;ubn&#34;</span>] <span style="color:#f92672">=</span> donors[[<span style="color:#e6db74">&#34;prefix&#34;</span>, <span style="color:#e6db74">&#34;bond_num&#34;</span>]]<span style="color:#f92672">.</span>apply(<span style="color:#66d9ef">lambda</span> x: <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(x<span style="color:#f92672">.</span>values<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#34;str&#34;</span>)), axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+mismatch <span style="color:#f92672">=</span> receivers[<span style="color:#f92672">~</span>receivers[<span style="color:#e6db74">&#34;ubn&#34;</span>]<span style="color:#f92672">.</span>isin(donors[<span style="color:#e6db74">&#34;ubn&#34;</span>])]
+mismatch[<span style="color:#e6db74">&#34;denominations&#34;</span>] <span style="color:#f92672">=</span> mismatch[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>apply(str2num)
+mismatch_data <span style="color:#f92672">=</span> mismatch<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#34;pol_party&#34;</span>])[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>div(<span style="color:#ae81ff">10_000_000</span>)
+fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(constrained_layout<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+mismatch_data<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>, ax<span style="color:#f92672">=</span>ax)
+ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Missing bond amount in Cr (INR)&#34;</span>)
+plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#34;../../static/images/electoral-bonds/mismatch_data.png&#34;</span>)
+<span style="color:#e6db74">&#34;/images/electoral-bonds/mismatch_data.png&#34;</span></code></pre></div>
+</div>
+<figure>
+<p><img src="/images/electoral-bonds/mismatch_data.png" alt="/images/electoral-bonds/mismatch_data.png" title="/images/electoral-bonds/mismatch_data.png" /></p>
+<figcaption>
+Mismatch of bond amount between donors and receivers.
+</figcaption>
+</figure>
+<p>
+There are total 18741 records of bond purchases since its inception. The bonds were purchased on 146 days in the last 5 years.
+There are total 1173 companies and individuals who purchased the bonds.
+This number is not exact because same company may have slightly different spelling in different rows.
+Though I have tried to account for that by changing such records, there is high probability of me missing a few records.
+&#34;Future Gaming&#34; is the top purchaser based on &#34;number of bonds&#34; and it has purchased 1368 bonds.
+Based on number of bonds, the BJP has received maximum number of bonds among the 24 political parties, i.e. 8633.
+There are 5 denominations of these bonds, Rs. One Thousand, Ten Thousand, One Lakh, Ten Lakh and One Crore and Rs. One Crore, were purchased for 12207 times.
+This makes the total donations at least Rs. 12207 Crore.
+Let&#39;s have a look at distribution of number of bonds across political parties. </p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+Number analysis
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
+<p>Here, we will see only the number of bonds and their distribution (disregarding the value of each bond). </p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">tdf <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#34;pol_party&#34;</span>]<span style="color:#f92672">.</span>value_counts(normalize<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)<span style="color:#f92672">.</span>mul(<span style="color:#ae81ff">100</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>to_frame()[:<span style="color:#ae81ff">23</span>]
+tdf<span style="color:#f92672">.</span>transpose()</code></pre></div>
+</div>
+<figure>
+<pre class="example">
+pol_party    BJP   TMC   INC  BRS  BIJU JD  DMK  YSRCONG  SHIVSENA  TDP  AAP  RJD  NCC  JDS  SKM  ASP  JMM  JANASENA  AIADMK  SAD  GOMANTAK  GFP  JD(U)  SDF
+proportion  42.3  16.2  15.4  8.8      4.2  3.2      2.3       1.7  1.4  1.2  0.7  0.6  0.4  0.2  0.2  0.2       0.2     0.2  0.2       0.1  0.1    0.1  0.0
+</pre>
+<figcaption>
+Number of bonds (in % of total bonds) encashed by parties
+</figcaption>
+</figure>
+<p>Clearly, BJP received about 42 % of the total number of bonds (not necessarily amount, which we will see soon). Surprisingly, TMC stands second, ahead of INC at least in terms of number of bonds received. You may have noticed that CPI(M) doesn&#39;t feature in the list. It was CPI(M) who petitioned the SC against electoral bonds and took a principled stand to not accept any electoral bond.</p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+Top donors
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">purchaser_wise <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#34;purchaser&#34;</span>])[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>apply(np<span style="color:#f92672">.</span>sum)<span style="color:#f92672">/</span><span style="color:#ae81ff">10_000_000</span>
+data <span style="color:#f92672">=</span> purchaser_wise<span style="color:#f92672">.</span>sort_values(ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+per_data <span style="color:#f92672">=</span> data <span style="color:#f92672">/</span> np<span style="color:#f92672">.</span>sum(data) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(nrows<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, ncols<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>))
+data[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">20</span>]<span style="color:#f92672">.</span>plot(ax<span style="color:#f92672">=</span>ax[<span style="color:#ae81ff">0</span>], kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>)
+per_data[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">20</span>]<span style="color:#f92672">.</span>plot(ax<span style="color:#f92672">=</span>ax[<span style="color:#ae81ff">1</span>], kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>)
+ax[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Amount in Cr (INR)&#34;</span>)
+ax[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Amount in %&#34;</span>)
+fig<span style="color:#f92672">.</span>tight_layout()
+plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#34;../../static/images/electoral-bonds/top_donors.png&#34;</span>)
+<span style="color:#e6db74">&#34;/images/electoral-bonds/top_donors.png&#34;</span></code></pre></div>
+</div>
+<figure>
+<p><img src="/images/electoral-bonds/top_donors.png" alt="/images/electoral-bonds/top_donors.png" title="/images/electoral-bonds/top_donors.png" /></p>
+<figcaption>
+Top donors of electoral bonds (absolute and % amount donated)
+</figcaption>
+</figure>
+<p>
+A little over ${1/4}^{th}$ amount is donated by top 4 donors. I would have liked to find out the donations across the sectors such as automobile, infra etc., but only company names are available and their sectors need to be tagged manually. Although, tagging companies for sectors can be partially automated, currently I am not motivated enough to do so. </p>
+<div id="outline-container-headline-8" class="outline-3">
+<h3 id="headline-8">
+Donation pattern over time
+</h3>
+<div id="outline-text-headline-8" class="outline-text-3">
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> matplotlib.gridspec <span style="color:#f92672">import</span> GridSpec
+tsM <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(df[<span style="color:#e6db74">&#34;purchase_date&#34;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#34;M&#34;</span>))[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>apply(np<span style="color:#f92672">.</span>sum)<span style="color:#f92672">.</span>mul(<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10_000_000</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)
+tsQ <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(df[<span style="color:#e6db74">&#34;purchase_date&#34;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#34;Q-MAR&#34;</span>))[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>apply(np<span style="color:#f92672">.</span>sum)<span style="color:#f92672">.</span>mul(<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10_000_000</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)
+tsY <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby(df[<span style="color:#e6db74">&#34;purchase_date&#34;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>to_period(<span style="color:#e6db74">&#34;Y-MAR&#34;</span>))[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>apply(np<span style="color:#f92672">.</span>sum)<span style="color:#f92672">.</span>mul(<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10_000_000</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)
+tdf <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>resample(<span style="color:#e6db74">&#34;M&#34;</span>, on<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;purchase_date&#34;</span>)[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>mul(<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">10_000_000</span>)<span style="color:#f92672">.</span>to_frame()<span style="color:#f92672">.</span>reset_index()
+tsm <span style="color:#f92672">=</span> tdf<span style="color:#f92672">.</span>groupby(tdf[<span style="color:#e6db74">&#34;purchase_date&#34;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>month)[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>apply(np<span style="color:#f92672">.</span>sum)
+fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">10</span>), constrained_layout<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+gs <span style="color:#f92672">=</span> GridSpec(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>, figure<span style="color:#f92672">=</span>fig)
+ax1 <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(gs[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>])
+ax2 <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(gs[<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>])
+ax3 <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(gs[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>])
+ax4 <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(gs[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>])
+ax4<span style="color:#f92672">.</span>vlines([<span style="color:#ae81ff">2.5</span>, <span style="color:#ae81ff">5.5</span>, <span style="color:#ae81ff">8.5</span>], <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3100</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;r&#34;</span>)
+ax4<span style="color:#f92672">.</span>annotate(<span style="color:#e6db74">&#34;Q4&#34;</span>, (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2500</span>), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+ax4<span style="color:#f92672">.</span>annotate(<span style="color:#e6db74">&#34;Q1&#34;</span>, (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2500</span>), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+ax4<span style="color:#f92672">.</span>annotate(<span style="color:#e6db74">&#34;Q2&#34;</span>, (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">2500</span>), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+ax4<span style="color:#f92672">.</span>annotate(<span style="color:#e6db74">&#34;Q3&#34;</span>, (<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2500</span>), fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>)
+tsY<span style="color:#f92672">.</span>plot(ax<span style="color:#f92672">=</span>ax1, kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>)
+tsQ<span style="color:#f92672">.</span>plot(ax<span style="color:#f92672">=</span>ax2, kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>)
+tsM<span style="color:#f92672">.</span>plot(ax<span style="color:#f92672">=</span>ax3, kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>)
+tsm<span style="color:#f92672">.</span>plot(ax<span style="color:#f92672">=</span>ax4, kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>)
+ax1<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Year&#34;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+ax2<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Year-Quarter&#34;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+ax3<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Year-Month&#34;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+ax4<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Month&#34;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+ax1<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Amount in Cr (INR)&#34;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+ax3<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Amount in Cr (INR)&#34;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>)
+plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#34;../../static/images/electoral-bonds/ts.png&#34;</span>)
+<span style="color:#e6db74">&#34;/images/electoral-bonds/ts.png&#34;</span></code></pre></div>
+</div>
+<figure>
+<p><img src="/images/electoral-bonds/ts.png" alt="/images/electoral-bonds/ts.png" title="/images/electoral-bonds/ts.png" /></p>
+<figcaption>
+Donation pattern over months, quarters and financial years
+</figcaption>
+</figure>
+<p>
+The donation pattern over months and financial quarters and financial years is shown in the above figure.
+Note that the quarters are financial quarters where first quarter of a financial year starts on the $1^{st}$ day of April month of the previous calendar year, i.e. first quarter of the financial year 2021 starts from April 01, 2020.
+In the financial year 2021, there was very little donation to political parties. This can be attributed to the Covid pandemic.
+However, political parties have more than made up for their <em>losses</em> during this period by securing significantly higher donations in 2024.
+The last plot in the above figure shows a very interesting pattern.
+The donors prefer to donate at the beginning of each quarter and avoid donating at the end of each quarter.
+Highest total donations are in Q3 followed by Q1.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-2">
+<h2 id="headline-9">
+Top receivers
+</h2>
+<div id="outline-text-headline-9" class="outline-text-2">
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">receiver_wise <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#34;pol_party&#34;</span>])[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>apply(np<span style="color:#f92672">.</span>sum)<span style="color:#f92672">/</span><span style="color:#ae81ff">10_000_000</span>
+data <span style="color:#f92672">=</span> receiver_wise<span style="color:#f92672">.</span>sort_values(ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+per_data <span style="color:#f92672">=</span> data <span style="color:#f92672">/</span> np<span style="color:#f92672">.</span>sum(data) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(nrows<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, ncols<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>))
+data[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">20</span>]<span style="color:#f92672">.</span>plot(ax<span style="color:#f92672">=</span>ax[<span style="color:#ae81ff">0</span>], kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>)
+per_data[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">20</span>]<span style="color:#f92672">.</span>plot(ax<span style="color:#f92672">=</span>ax[<span style="color:#ae81ff">1</span>], kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>)
+ax[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Amount in Cr (INR)&#34;</span>)
+ax[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Amount in %&#34;</span>)
+ax[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>set_ylim([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">50</span>])
+fig<span style="color:#f92672">.</span>tight_layout()
+plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#34;../../static/images/electoral-bonds/top_receivers.png&#34;</span>)
+<span style="color:#e6db74">&#34;/images/electoral-bonds/top_receivers.png&#34;</span></code></pre></div>
+</div>
+<figure>
+<p><img src="/images/electoral-bonds/top_receivers.png" alt="/images/electoral-bonds/top_receivers.png" title="/images/electoral-bonds/top_receivers.png" /></p>
+<figcaption>
+Amount encashed by political parties through electoral bonds.
+</figcaption>
+</figure>
+<p>
+The total donations received are INR 12769 Crores.
+BJP secured about INR 6060 Crores, which is about 47 % of the total donations.
+The top 6 parties have received more than 90 % of the donations.
+Which also means that, from the top 6 parties, BJP managed to secure more amount of donations compared to remaining 5 parties.</p>
+<div id="outline-container-headline-10" class="outline-3">
+<h3 id="headline-10">
+Range of donations for each party
+</h3>
+<div id="outline-text-headline-10" class="outline-text-3">
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+party_500cr <span style="color:#f92672">=</span> data[data <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">500</span>]<span style="color:#f92672">.</span>index
+party_range <span style="color:#f92672">=</span> df[df[<span style="color:#e6db74">&#34;pol_party&#34;</span>]<span style="color:#f92672">.</span>isin(party_500cr)]<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#34;pol_party&#34;</span>, <span style="color:#e6db74">&#34;purchaser&#34;</span>])[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>apply(np<span style="color:#f92672">.</span>sum)<span style="color:#f92672">/</span><span style="color:#ae81ff">10_000_000</span>
+vdf <span style="color:#f92672">=</span> party_range<span style="color:#f92672">.</span>to_frame()<span style="color:#f92672">.</span>reset_index()
+fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots()
+sns<span style="color:#f92672">.</span>violinplot(data<span style="color:#f92672">=</span>vdf, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pol_party&#34;</span>, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;denominations&#34;</span>, ax<span style="color:#f92672">=</span>ax, density_norm<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, split<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, inner<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stick&#34;</span>, orient<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;h&#34;</span>)
+ax<span style="color:#f92672">.</span>set_xlim([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">50</span>])
+ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Denomination (in Cr)&#34;</span>)
+fig<span style="color:#f92672">.</span>tight_layout()
+plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#34;../../static/images/electoral-bonds/party_range.png&#34;</span>)
+<span style="color:#e6db74">&#34;/images/electoral-bonds/party_range.png&#34;</span></code></pre></div>
+</div>
+<figure>
+<p><img src="/images/electoral-bonds/party_range.png" alt="/images/electoral-bonds/party_range.png" title="/images/electoral-bonds/party_range.png" /></p>
+<figcaption>
+Distribution of donations in parties who received at least 500 Cr donation.
+</figcaption>
+</figure>
+<p>
+The plot above contains the distribution of donation amount to top 6 political parties. The maximum height of each distribution is proportional to the number of donations received and hence their sizes and shapes are directly comparable. Each vertical line inside the distribution is an observation.  BJP has managed to secure donations in low as well as high denominations. When it comes to low value donations, INC is just behind BJP but INC has not many high value denominations. TMC has managed to get significant number of high value denominations compared to INC and BRS. Heights for BIJU JD and DMK are so small at this scale that no remark can be made about them. </p>
+</div>
+</div>
+<div id="outline-container-headline-11" class="outline-3">
+<h3 id="headline-11">
+Top donors per party
+</h3>
+<div id="outline-text-headline-11" class="outline-text-3">
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">tdf <span style="color:#f92672">=</span> df[df[<span style="color:#e6db74">&#34;pol_party&#34;</span>]<span style="color:#f92672">.</span>isin(party_500cr)]<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#34;pol_party&#34;</span>, <span style="color:#e6db74">&#34;purchaser&#34;</span>])[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>div(<span style="color:#ae81ff">10_000_000</span>)
+sdf <span style="color:#f92672">=</span> tdf<span style="color:#f92672">.</span>to_frame()<span style="color:#f92672">.</span>reset_index()<span style="color:#f92672">.</span>sort_values(by<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;pol_party&#34;</span>, <span style="color:#e6db74">&#34;denominations&#34;</span>], ascending<span style="color:#f92672">=</span>[<span style="color:#66d9ef">True</span>, <span style="color:#66d9ef">False</span>])<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#34;pol_party&#34;</span>])<span style="color:#f92672">.</span>nth[:<span style="color:#ae81ff">2</span>]
+sdf <span style="color:#f92672">=</span> sdf<span style="color:#f92672">.</span>pivot_table(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pol_party&#34;</span>, columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;purchaser&#34;</span>, values<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;denominations&#34;</span>)
+fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">6</span>), constrained_layout<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+sdf<span style="color:#f92672">.</span>plot(kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>, stacked<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, ax<span style="color:#f92672">=</span>ax, cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tab10&#34;</span>)
+ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Amount in Cr (INR)&#34;</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">14</span>)
+plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;lower left&#34;</span>, bbox_to_anchor<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0.0</span>, <span style="color:#ae81ff">1.01</span>), ncols<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>)
+plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#34;../../static/images/electoral-bonds/top2_per_party.png&#34;</span>)
+<span style="color:#e6db74">&#34;/images/electoral-bonds/top2_per_party.png&#34;</span></code></pre></div>
+</div>
+<figure>
+<p><img src="/images/electoral-bonds/top2_per_party.png" alt="/images/electoral-bonds/top2_per_party.png" title="/images/electoral-bonds/top2_per_party.png" /></p>
+<figcaption>
+Top 2 donors for top 6 political parties (based on donation received)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-12" class="outline-2">
+<h2 id="headline-12">
+Epilogue
+</h2>
+<div id="outline-text-headline-12" class="outline-text-2">
+<p>Thats all I could do with available data and time.
+A more rigorous analysis should be done on this data considering its importance.
+However, that needs a lot more time and other resources.
+Do let me know what you think about the analysis.
+Did I miss any obvious metric that should be part of this analysis?
+Are there any issues with my code (and I agree that the code is ugly right now)? </p>
+</div>
+</div>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/posts/my-custom-emacs-config/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">My custom emacs config</span>
+    </a>
+    
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
+
+
+
+
+
+
+    
+
+
+
+    </body>
+</html>

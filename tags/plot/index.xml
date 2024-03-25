@@ -14,7 +14,7 @@
       
       <guid>https://dbpatankar.github.io/posts/julia-contour/</guid>
       <description>Plots library in julia is very powerful for plotting and I have rarely needed any other plotting library. However its documentation seems lacking in explaining its features, especially when you want to plot contours. So this page explains some of the common features of the function contour() which I need to use often.
-Data Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z).</description>
+Data  Lets consider a grid as shown in figure below. Each dot on the grid is a point with (x, y) coordinate pair and has an associated value of elevation of the point from ground level (z).</description>
     </item>
     
   </channel>

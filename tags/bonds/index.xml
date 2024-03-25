@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bonds on D-V-J</title>
+    <link>https://dbpatankar.github.io/tags/bonds/</link>
+    <description>Recent content in bonds on D-V-J</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dbpatankar.github.io/tags/bonds/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My name is Bond, Electoral Bond.</title>
+      <link>https://dbpatankar.github.io/posts/electoral-bonds/</link>
+      <pubDate>Fri, 22 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dbpatankar.github.io/posts/electoral-bonds/</guid>
+      <description>The honourable Supreme Court of India had ordered the State Bank of India (SBI) to provide all the details of electoral bonds to the Election Commission of India (ECI), who was then required to make it public. After initial hesitation, SBI finally provided all the details and ECI has published those details on their website. Out of curiosity, I downloaded the data and visualized it. This post is just a part of that visualization.</description>
+    </item>
+    
+  </channel>
+</rss>
