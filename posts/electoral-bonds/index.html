@@ -159,8 +159,6 @@ MathJax = {
 	<a target="_blank" href="https://github.com/dbpatankar" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
 	
 	
-	<a target="_blank" href="https://bitbucket.org/dbpatankar" rel="me"><i class="fab fa-bitbucket fa-lg" aria-hidden="true"></i></a>
-	
 	
 	
 	
@@ -176,9 +174,13 @@ MathJax = {
 	
 	
 	
+	<a target="_blank" href="https://orcid.org/0000-0002-6730-5111" rel="me"><i class="fab fa-orcid fa-lg" aria-hidden="true"></i></a>
 	
-	<a target="_blank" href="https://youtube.com/dbpatankar" rel="me"><i class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
 	
+	<a target="_blank" href="https://youtube.com/@numericalrecipes2492" rel="me"><i class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	
+	
+	<a target="_blank" href="mailto:dbpatankar@duck.com" rel="me"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
 	
 	
 	
@@ -280,9 +282,11 @@ MathJax = {
 </li>
 <li><a href="#headline-11">Top donors per party</a>
 </li>
+<li><a href="#headline-12">Pattern of top 20 donors</a>
+</li>
 </ul>
 </li>
-<li><a href="#headline-12">Epilogue</a>
+<li><a href="#headline-13">Epilogue</a>
 </li>
 </ul>
 </nav>
@@ -851,13 +855,59 @@ Top 2 donors for top 6 political parties (based on donation received)
 </figure>
 </div>
 </div>
+<div id="outline-container-headline-12" class="outline-3">
+<h3 id="headline-12">
+Pattern of top 20 donors
+</h3>
+<div id="outline-text-headline-12" class="outline-text-3">
+<p>The above plot gives only the top 2 donors for each party and hence does not reflect complete picture of their donation pattern.
+The following table does the job.
+It provides donation pattern of top 20 donors across political parties.
+BJP has received donations from all top 20 parties which is followed by INC, TMC and BIJU JD receiving donations from 15, 7 and 6 donors, respectively.</p>
+<div class="src src-python">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">top20_donors <span style="color:#f92672">=</span> purchaser_wise<span style="color:#f92672">.</span>sort_values(ascending<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)[:<span style="color:#ae81ff">20</span>]
+topd <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>groupby([<span style="color:#e6db74">&#34;purchaser&#34;</span>, <span style="color:#e6db74">&#34;pol_party&#34;</span>])[<span style="color:#e6db74">&#34;denominations&#34;</span>]<span style="color:#f92672">.</span>sum()<span style="color:#f92672">.</span>div(<span style="color:#ae81ff">10_000_000</span>)<span style="color:#f92672">.</span>to_frame()<span style="color:#f92672">.</span>reset_index()
+topd <span style="color:#f92672">=</span> topd[topd[<span style="color:#e6db74">&#34;purchaser&#34;</span>]<span style="color:#f92672">.</span>isin(top20_donors<span style="color:#f92672">.</span>index)]
+topd<span style="color:#f92672">.</span>pivot_table(index<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;purchaser&#34;</span>, columns<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pol_party&#34;</span>, values<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;denominations&#34;</span>)<span style="color:#f92672">.</span>round(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>fillna(<span style="color:#e6db74">&#34;-&#34;</span>)</code></pre></div>
+</div>
+<figure>
+<pre class="example">
+pol_party           AAP   ASP BIJU JD    BJP    BRS    DMK    INC JANASENA JD(U)  JDS  JMM   NC   NCC  RJD  SAD  SDF SHIVSENA   SKM   TDP    TMC YSRCONG
+purchaser                                                                                                                                               
+AVEES TRADING      10.0     -     3.0    1.0      -      -   53.0        -     -    -    -    -     -    -    -    -        -     -     -   45.5       -
+B G SHIRKE            -     -       -   30.0      -      -    2.0        -     -    -    -    -     -    -    -    -     85.0     -     -      -       -
+BHARTI AIRTEL         -     -       -  236.4      -      -    8.0        -   1.0    -    -  0.5     -  0.1  1.0    -        -     -     -      -       -
+BIRLA COMPANIES       -     -       -  105.0      -      -      -        -     -    -    -    -     -    -    -    -      2.0     -     -      -       -
+DHARIWAL INFRA        -     -       -   25.0      -      -      -        -     -    -    -    -     -    -    -    -        -     -     -   90.0       -
+DLF                   -     -       -  170.0      -      -      -        -     -    -    -    -     -    -    -    -        -     -     -      -       -
+ESSEL MINING          -     -   174.5   50.0      -      -      -        -     -    -    -    -     -    -    -    -        -     -     -      -       -
+FUTURE GAMING         -     -       -  100.0      -  503.0   50.0        -     -    -    -    -     -    -    -  5.0        -  11.0     -  542.0   154.0
+HALDIA ENERGY         -     -       -   81.0      -      -   15.0        -     -    -    -    -     -    -    -    -        -     -     -  281.0       -
+JINDAL COMPANIES      -     -   130.0   42.0      -      -   23.0        -     -    -    -    -     -    -    -    -      0.5     -     -      -       -
+KEVENTER FOODPARK     -  10.0       -  144.5      -      -   20.0        -     -    -    -    -     -    -  0.5    -        -     -     -   20.0       -
+MADANLAL LTD.         -     -       -  175.5      -      -   10.0        -     -    -    -    -     -    -    -    -        -     -     -      -       -
+MEGHA ENGG            -     -       -  584.0  195.0   85.0   18.0      4.0  10.0  5.0    -    -     -    -    -    -        -     -  28.0      -    37.0
+MKJ ENTERPRISES     7.0     -    10.0   26.9   10.0      -   91.6        -     -    -  1.0    -     -    -    -    -        -     -     -   45.9       -
+QWIK SUPPLY           -     -       -  375.0      -      -      -        -     -    -    -    -  10.0    -    -    -     25.0     -     -      -       -
+TORRENT POWER       7.0     -       -   76.0      -      -   17.0        -     -    -    -    -   3.5    -    -    -      3.0     -     -      -       -
+UTKAL ALUMINA         -     -    70.0   75.0      -      -    0.1        -     -    -    -    -     -    -    -    -        -     -     -      -       -
+VEDANTA               -     -    40.0  230.2      -      -  125.0        -     -    -  5.0    -     -    -    -    -        -     -     -    0.2     1.8
+WESTERN UP POWER      -     -       -   80.0      -      -  110.0     10.0     -    -    -    -     -    -    -    -        -     -  20.0      -       -
+YASHODA HOSPITAL    1.0     -       -    2.0   94.0      -   64.0        -     -    -    -    -     -    -    -    -        -     -     -      -     1.0
+</pre>
+<figcaption>
+Donations by top 20 donors to different parties (in Cr INR)
+</figcaption>
+</figure>
 </div>
 </div>
-<div id="outline-container-headline-12" class="outline-2">
-<h2 id="headline-12">
+</div>
+</div>
+<div id="outline-container-headline-13" class="outline-2">
+<h2 id="headline-13">
 Epilogue
 </h2>
-<div id="outline-text-headline-12" class="outline-text-2">
+<div id="outline-text-headline-13" class="outline-text-2">
 <p>Thats all I could do with available data and time.
 A more rigorous analysis should be done on this data considering its importance.
 However, that needs a lot more time and other resources.
