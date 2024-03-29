@@ -39,21 +39,21 @@ h5 {
     color: #ffffff;
 }
 h5:before {
-    content: ""; //counter(h5c, decimal) " ";
+    content: ""; /*counter(h5c, decimal) " ";*/
 }
 h6 {
     counter-increment: h6c;
     color: #ffffff;
 }
 h6:before {
-    content: ""; //counter(h6c, decimal) " ";
+    content: ""; /*counter(h6c, decimal) " ";*/
 }
 
 .post {
     text-align: justify;
 }
 
-//main {counter-reset: table-numbered figure-numbered;}
+/*main {counter-reset: table-numbered figure-numbered;}*/
 
 figure {
     display: block;
@@ -129,3 +129,58 @@ table {
     margin-right: auto;
     width: auto !important;
 }
+
+div#toggleCode {
+    font-size: 14pt;
+    display: flex;
+    justify-content: center;
+}
+
+input.checkbox{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  label.toggle {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 70px;
+    height: 40px;
+    background: grey;
+    display: block;
+    border-radius: 40px;
+    position: relative;
+  }
+  
+  label.toggle:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 30px;
+    transition: 0.3s;
+  }
+
+  input.checkbox:checked + label {
+    background: #bada55;
+  }
+  
+  input.checkbox:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+  
+  label:active:after {
+    width: 60px;
+  }
+
+  div.label {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
