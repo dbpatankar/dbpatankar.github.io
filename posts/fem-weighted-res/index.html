@@ -309,8 +309,8 @@ Approximate solution and domain residual
 <p>
 Before we proceed with the numerical solution, lets see what information do we have about the <em>approximate solution</em> which we want to find out.</p>
 <ol>
-<li>The <em>approximate solution</em> should satisfy differential equation given by \eqref{eq:gde} at each point of the domain i.e. $x \in [0, 1]$.</li>
-<li>The <em>approximate solution</em> should satisfy the condition $y = 0$ at $x = 0$.</li>
+<li>The <em>approximate solution</em> should satisfy differential equation given by \eqref{eq:gde} at each point inside the domain i.e. $x \in (0, 1)$.</li>
+<li>The <em>approximate solution</em> should satisfy the condition $y = 0$ at $x = 0$, i.e. at the boundary of the domain.</li>
 </ol>
 <p>For the sake of brevity, lets say the <em>approximate solution</em> is $\hat{y}(x)$ which is an approximation to $y(x)$. Of the two conditions above, second one seems easy to satisfy. Can we come up with some function $\hat{y} (x)$ which has property $\hat{y} = 0$ at $x = 0$? How about $\hat{y}  (x) = c_1 x$, where $c_{1}$ is an arbitrary constant? Does this function satisfy the first condition given above? Definitely not. But I still want to use the same function as an approximation to the exact solution given by \eqref{eq:gde-sol}. There is an issue though, I do not have any idea about what should be the arbitrary constant $c_{1}$. With change in $c_{1}$, the function $\hat{y}  (x)$ also changes. So lets plot $\hat{y}  (x)$ for different values of $c_{1}$ and on the same plot we will also show the analytical solution just for the sake of comparison.</p>
 <figure>
@@ -320,10 +320,10 @@ Comparison of exact solution with approximation function $\hat{y}  (x) = c_1 x$ 
 </figcaption>
 </figure>
 <p>
-From <a href="#fig:varying_c1">above figure</a>, it is clear that none of the $c_{1}$ values are giving us an approximation which satisfies condition 1. I can say this only because I have the exact solution with me. In reality, you will never have the exact solution to compare with. In fact, if you already have the exact solution, seeking approximate solution is stupidity. So lets continue with our stupidity.</p>
+From <a href="#fig:varying_c1">above figure</a>, it is clear that none of the $c_{1}$ values are giving us an approximation which satisfies condition 1. I can say this only because I have the exact solution with me. In reality, you will never have the exact solution to compare with. In fact, if you already have the exact solution, seeking an approximate solution is stupid. So lets continue with our stupidity.</p>
 <p>
 As I dont know the exact solution I want to use $c_{1} x$ as our approximate solution. But what value of $c_{1}$ should I choose which will keep $\hat{y}  (x)$
-as <em>close</em> to actual solution as possible. How to decide which curve is better than all the other infinite choices? This is where we are going to use our first condition which states that the actual solution satisfies \eqref{eq:gde} at each point on the domain. However, we have an approximation $\hat{y}  (x)$
+as <em>close</em> to actual solution as possible? How to decide which curve is better than all the other infinite choices? This is where we are going to use our first condition which states that the actual solution satisfies \eqref{eq:gde} at each point on the domain. However, we have an approximation $\hat{y}  (x)$
 which does not satisfy the differential equation at every point in the domain. If we substitute $\hat{y}  (x)$
 into the differential equation, what we get is error $R_{\Omega}$. The error $R_{\Omega}$ is often referred to as domain residual as this gives us the residual (i.e. error) at any point in the domain.
 \begin{eqnarray}
@@ -339,7 +339,7 @@ If we substitute \(x\) coordinate of any point in the domain, we will get error 
 Minimize residual
 </h2>
 <div id="outline-text-headline-3" class="outline-text-2">
-<p>We have seen that the approximation function introduces domain residual at each point on the domain. Also the domain residual varies from point to point and at some point it can also be zero. Ideally we want the domain residual to be zero at all points. But as that is not possible, lets do whatever best we can. Lets just have one more plot for varying value of \(c_1\). But this time instead of plotting the approximation function, lets plot the domain residual. We know \(R_{\Omega}\) is given by
+<p>We have seen that the approximation function introduces domain residual at each point on the domain. Also the domain residual varies from point to point and at some point it can also be zero. Ideally we want the domain residual to be zero at all points. But as that is not possible, let&#39;s do whatever best we can. Let&#39;s just have one more plot for varying value of \(c_1\). But this time instead of plotting the approximation function, lets plot the domain residual. We know \(R_{\Omega}\) is given by
 \begin{equation}
 R_{\Omega} = c_1 - 3 x^2 \nonumber
 \end{equation}</p>
@@ -360,7 +360,7 @@ Graphical representation of domain residual ($R_{\Omega}$)
 \begin{equation}
 y (x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 \nonumber
 \end{equation}
-Where \(a_0 = a_1 = a_2 = 0\) and \(a_3 = 1\). We will look at this expression just like we look at vectors. Lets say the function \(y (x)\) is composed of four basis functions, \(1, x, x^2 \text{ and } x^3\) weighted by \(a_0, a_1, a_2 \text{ and } a_3\) respectively. Note that the basis functions need not be orthogonal to each other. So lets just draw this (conceptually only). Let me emphasize that the below drawing is only for understanding. It is based on concepts of vector spaces which are applicable in function spaces as well. However we cannot draw function spaces like this.</p>
+Where \(a_0 = a_1 = a_2 = 0\) and \(a_3 = 1\). We will look at this expression just like we look at vectors. Lets say the function \(y (x)\) is composed of four basis functions, \(1, x, x^2 \text{ and } x^3\) weighted by \(a_0, a_1, a_2 \text{ and } a_3\) respectively. Note that the basis functions need not be orthogonal to each other. So lets just draw this (conceptually only). Let me emphasize that the below drawing is only for understanding. It is based on concepts of vector spaces which are applicable in function spaces as well. However we cannot draw function spaces like this (or at least that&#39;s what I think).</p>
 <figure>
 <img src="/images/fem-weighted-res/weighted_res-3.png" alt="/images/fem-weighted-res/weighted_res-3.png" title="/images/fem-weighted-res/weighted_res-3.png" class="numfig" id="fig:function-space"/>
 <figcaption>
@@ -518,6 +518,23 @@ Summary
   
 
   
+    
+        <script src="https://giscus.app/client.js"
+        data-repo="dbpatankar/dbpatankar.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkxNDUyMzUyNjU="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOCKgdQc4CeYEz"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_dimmed"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
     
 
 
